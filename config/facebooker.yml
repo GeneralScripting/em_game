@@ -1,6 +1,11 @@
 production:
   app_id: 284301908333107
   secret: dab5d67a22dc942bb3ef86ab8060124a
+
 development:
+  app_id: 284301908333107
+  secret: dab5d67a22dc942bb3ef86ab8060124a
+
+test:
   app_id: 284301908333107
   secret: dab5d67a22dc942bb3ef86ab8060124a

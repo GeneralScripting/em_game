@@ -24,6 +24,7 @@ gem "launchy", ">= 2.1.0", :group => :test
 gem "rspec-rails", ">= 2.10.1", :group => [:development, :test]
 gem "factory_girl_rails", ">= 3.3.0", :group => [:development, :test]
 gem "email_spec", ">= 1.2.1", :group => :test
+gem 'shoulda', :group => :test
 gem "guard", ">= 0.6.2", :group => :development  
 case HOST_OS
   when /darwin/i

@@ -25,8 +25,11 @@ module EmGame
       
     end
 
-      config.sass.load_paths << "/Users/maximilianwoltersdorf/.rvm/gems/ruby-1.9.3-p194@em/gems/compass-0.12.1/frameworks/compass/stylesheets"
-      config.sass.load_paths << "/Users/maximilianwoltersdorf/.rvm/gems/ruby-1.9.3-p194@em/gems/compass-960-plugin-0.10.4/stylesheets"
+    config.sass.load_paths << "#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/compass/stylesheets"
+    config.sass.load_paths << "#{Gem.loaded_specs['compass-960-plugin'].full_gem_path}/stylesheets"
+    #config.sass.load_paths << "/Users/maximilianwoltersdorf/.rvm/gems/ruby-1.9.3-p194@em/gems/compass-0.12.1/frameworks/compass/stylesheets"
+    #config.sass.load_paths << "/Users/maximilianwoltersdorf/.rvm/gems/ruby-1.9.3-p194@em/gems/compass-960-plugin-0.10.4/stylesheets"
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
