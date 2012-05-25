@@ -14,6 +14,8 @@ gem "haml-rails", ">= 0.3.4", :group => :development
 gem "bootstrap-sass", ">= 2.0.3"
 gem "simple_form"
 gem "airbrake"
+gem 'hpricot'
+gem 'localized_country_select', :git => 'git://github.com/kristianmandrup/localized_country_select.git'
 gem "compass", "~> 0.12.1", :group => [:assets]
 gem "compass-rails", "~> 1.0.0", :group => [:assets]
 gem "compass-960-plugin", "~> 0.10.4", :group => [:assets]
