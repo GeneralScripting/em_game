@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/kristianmandrup/localized_country_select.git
+  revision: 0bb1d9aeccd1e95f49f904f2802b3d98d63ed80f
+  specs:
+    localized_country_select (0.1.0)
+      rails (>= 2.3.5)
+      rails (>= 2.3.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -118,6 +126,7 @@ GEM
       railties (~> 3.0)
     hashie (1.0.0)
     hike (1.2.1)
+    hpricot (0.8.6)
     httparty (0.8.3)
       multi_json (~> 1.0)
       multi_xml
@@ -246,9 +255,11 @@ DEPENDENCIES
   guard-rspec (>= 0.4.3)
   haml (>= 3.1.6)
   haml-rails (>= 0.3.4)
+  hpricot
   jquery-rails
   launchy (>= 2.1.0)
   libnotify
+  localized_country_select!
   mysql2
   rails (= 3.2.3)
   rb-inotify
