@@ -2,4 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  layouts:
+    navigation:
+      logo: "EM Betting Game"
+      powered_by: "powered by <a href='https://www.testcloud.de/' target='_blank'><span class='tclogo'>test<span class='cloud'>Cloud</span></span></a>"
+
+  login:
+    index:
+      matches: "Matches"
+      ranking: "Ranking"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120525145815) do
+ActiveRecord::Schema.define(:version => 20120525191321) do
 
   create_table "teams", :force => true do |t|
     t.string   "country"
@@ -31,5 +31,24 @@ ActiveRecord::Schema.define(:version => 20120525145815) do
   add_index "teams", ["country"], :name => "index_teams_on_country"
   add_index "teams", ["group_cd"], :name => "index_teams_on_group_cd"
   add_index "teams", ["place"], :name => "index_teams_on_place"
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "username"
+    t.string   "image_url"
+    t.string   "large_image_url"
+    t.string   "small_image_url"
+    t.string   "square_image_url"
+    t.string   "facebook_idx"
+    t.integer  "score"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email"
+  add_index "users", ["facebook_idx"], :name => "index_users_on_facebook_idx"
+  add_index "users", ["score"], :name => "index_users_on_score"
 
 end

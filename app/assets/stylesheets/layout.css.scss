@@ -1,0 +1,80 @@
+
+@import "compass";
+
+
+a {
+  color:#000;
+  &:visited {
+    color:#000;
+  }
+  &:active {
+    color:#0000AA;
+  }
+  &:hover {
+    color:#999;
+    text-decoration:none;
+  }
+}
+
+span.tclogo {
+  font-weight:bold;
+  span.cloud {
+    color:#6abde9;
+  }
+}
+
+h2 {
+  font-size:26px;
+  line-height:28px;
+  font-family:"LondrinaShadowRegular";
+}
+
+#main {
+  margin-top:20px;
+}
+
+header.navbar {
+  //@include background(linear-gradient(top, #3B5998, #FFFFFF));
+  @include background(linear-gradient(top, #133783, #FFFFFF));
+  nav {
+    background:transparent;
+    @include box-shadow(none);
+    @include min-height(20px);
+    .brand {
+      position:absolute;
+      top:7px;
+      left:10px;
+      color:#333;
+      img {
+        float:left;
+      }
+      .logo {
+        display:block;
+        position:relative;
+        top:0;
+        font-size:37px;
+        line-height:35px;
+        font-family:"LondrinaShadowRegular";
+        margin:0 0 0 60px;
+        padding:0;
+      }
+      .sub {
+        display:block;
+        font-size:12px;
+        margin:0 0 0 60px;
+      }
+    }
+  }
+}
+
+#score {
+  position:absolute;
+  top:12px;
+  right:12px;
+  padding:8px 20px 12px;
+  color:#333;
+  .number {
+    font-size:36px;
+    font-family:"LondrinaOutlineRegular";
+  }
+}

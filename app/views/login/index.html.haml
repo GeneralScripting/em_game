@@ -1,2 +1,23 @@
 = fb_connect_async_js
-= current_facebook_user.fetch
+
+.container_12
+
+  .grid_3
+    %h2= t('.matches')
+  .grid_6
+    abc
+  #ranking.grid_3
+    %h2= t('.ranking')
+    %ol
+      %li
+        = image_tag(@user.square_image_url, :size => '25x25')
+        .name= @user.full_name
+        .score= @user.score
+      %li
+        = image_tag(@user.square_image_url, :size => '25x25')
+        .name= @user.full_name
+        .score= @user.score
+      %li
+        = image_tag(@user.square_image_url, :size => '25x25')
+        .name= @user.full_name
+        .score= @user.score
