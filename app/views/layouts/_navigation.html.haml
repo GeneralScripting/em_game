@@ -3,6 +3,10 @@
   .logo= t('.logo')
   .sub= t('.powered_by').html_safe
 
-#score
-  %label= t('.your_score')
-  .number 37
+#top_stats
+  .item
+    %label= t('.your_score')
+    .number= @current_user.score || 0
+  .item
+    %label= t('.your_rank')
+    .number= @current_user.score_ranking

@@ -3,10 +3,33 @@
 
 #ranking {
   ol {
+    margin:12px 0;
     li {
+      position:relative;
+      list-style-type:none;
       @include clearfix;
+      margin:7px 0;
       img {
         float:left;
+        padding:1px;
+        border:1px solid #CCC;
+        margin:0 4px;
+      }
+      .name {
+        font-weight:bold;
+      }
+      .score {
+        
+      }
+      .rank {
+        position:absolute;
+        top:8px;
+        right:0;
+        font-size:19px;
+        font-family:"LondrinaOutlineRegular";
+        span {
+          font-size:32px;
+        }
       }
     }
   }

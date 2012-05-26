@@ -51,9 +51,9 @@ header.navbar {
       .logo {
         display:block;
         position:relative;
-        top:0;
-        font-size:37px;
-        line-height:35px;
+        top:-3px;
+        font-size:36px;
+        line-height:36px;
         font-family:"LondrinaShadowRegular";
         margin:0 0 0 60px;
         padding:0;
@@ -67,12 +67,17 @@ header.navbar {
   }
 }
 
-#score {
+#top_stats {
   position:absolute;
   top:12px;
   right:12px;
-  padding:8px 20px 12px;
+  padding:8px 0 12px;
   color:#333;
+  .item {
+    float:right;
+    margin:0 12px;
+    text-align:center;
+  }
   .number {
     font-size:36px;
     font-family:"LondrinaOutlineRegular";

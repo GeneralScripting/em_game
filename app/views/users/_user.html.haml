@@ -1,0 +1,5 @@
+%li.user
+  = image_tag(user.square_image_url, :size => '30x30')
+  .name= user.full_name
+  .score= user.score || 0
+  .rank= "#<span>#{user.score_ranking}</span>".html_safe
