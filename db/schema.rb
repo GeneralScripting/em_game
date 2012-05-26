@@ -11,7 +11,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120525191321) do
+ActiveRecord::Schema.define(:version => 20120526133504) do
+
+  create_table "games", :force => true do |t|
+    t.integer  "team_a_id"
+    t.integer  "team_b_id"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.integer  "team_a_goals"
+    t.integer  "team_b_goals"
+    t.integer  "team_a_penalty_goals"
+    t.integer  "team_b_penalty_goals"
+    t.integer  "team_a_halftime_goals"
+    t.integer  "team_b_halftime_goals"
+    t.integer  "group_cd"
+    t.integer  "finals_cd"
+    t.text     "comment"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+  end
+
+  add_index "games", ["end_at"], :name => "index_games_on_end_at"
+  add_index "games", ["finals_cd"], :name => "index_games_on_finals_cd"
+  add_index "games", ["group_cd"], :name => "index_games_on_group_cd"
+  add_index "games", ["start_at"], :name => "index_games_on_start_at"
+  add_index "games", ["team_a_goals"], :name => "index_games_on_team_a_goals"
+  add_index "games", ["team_a_id"], :name => "index_games_on_team_a_id"
+  add_index "games", ["team_b_goals"], :name => "index_games_on_team_b_goals"
+  add_index "games", ["team_b_id"], :name => "index_games_on_team_b_id"
 
   create_table "teams", :force => true do |t|
     t.string   "country"
