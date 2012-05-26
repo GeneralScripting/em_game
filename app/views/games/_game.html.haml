@@ -1,4 +1,4 @@
-%li.game.container_16
+%li.game.container_16{ :id => "game_#{game.id}" }
   .team_a.grid_8
     .flag.flaga= image_tag("flags/48/#{game.team_a.country.downcase}.png")
     .country= t(game.team_a.country, :scope => 'countries')
@@ -7,4 +7,11 @@
     .country= t(game.team_b.country, :scope => 'countries')
   .infos
     .round= t(game.round, :scope => 'rounds')
-    .date= l(game.start_at)
+    .date= l(game.start_at, :format => :default)
+    //.time= l(game.start_at, :format => :timeonly)
+  .button
+    - @bets ||= current_user.fetch_bets
+    - if bet = @bets.select {|b| b.game_id == game.id }.first
+      = link_to t('.change_bet', :bet => bet.result), '', :remote => true, :class => 'btn btn-warning btn-small'
+    - else
+      = link_to t('.bet'), new_bet_path(:game_id => game), :remote => true, :class => 'fancy btn btn-primary btn-small'

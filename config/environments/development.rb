@@ -32,6 +32,8 @@ EmGame::Application.configure do
   # Do not compress assets
   config.assets.compress = false
 
+  config.cache_store = :dalli_store, { :namespace => 'em_game_dev', :expires_in => 1.day, :compress => true }
+
   # Expands the lines which load the assets
   config.assets.debug = true
 end

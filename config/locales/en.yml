@@ -14,6 +14,17 @@ en:
       matches: "Matches"
       ranking: "Ranking"
 
+  games:
+    game:
+      bet: bet
+      change_bet: "change bet (%{bet})"
+
+  bets:
+    new:
+      title: "Place your bet"
+    form:
+      goals: "Goals"
+
   rounds:
     a: Group A
     b: Group B
@@ -24,9 +35,19 @@ en:
     last_4: Semifinal
     last_2: Final
 
+  helpers:
+    select:
+      prompt: "Please select"
+    submit:
+      bet:
+        create: "place bet »"
+        update: "update bet »"
+
   time:
     am: am
     formats:
+      dateonly: "%m/%d/%Y"
+      timeonly: "%H:%M"
       default: "%m/%d/%Y %I:%M %p"
       input: "%m/%d/%Y"
       int: "%Y-%m-%d %H:%M"

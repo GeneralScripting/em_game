@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :facebook_idx, :first_name, :last_name, :score, :image_url, :large_image_url, :small_image_url, :square_image_url, :username, :locale
 
   # relations
-  
+  has_many :bets
 
   # validations
   validates :email, :first_name, :last_name, :facebook_idx, :locale, :presence => true
@@ -33,6 +33,10 @@ class User < ActiveRecord::Base
 
   def full_name
     "#{first_name} #{last_name}"
+  end
+
+  def fetch_bets
+    Rails.cache.fetch(['user_bets', cache_key].join('/')) { bets.all }
   end
 
 

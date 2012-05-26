@@ -24,7 +24,7 @@ it = Team.create!(:country => 'IT', :group => :c)
 ir = Team.create!(:country => 'IE', :group => :c)
 hr = Team.create!(:country => 'HR', :group => :c)
 fr = Team.create!(:country => 'FR', :group => :d)
-gb = Team.create!(:country => 'GB', :group => :d)
+gb = Team.create!(:country => 'EN', :group => :d)
 ua = Team.create!(:country => 'UA', :group => :d)
 se = Team.create!(:country => 'SE', :group => :d)
 

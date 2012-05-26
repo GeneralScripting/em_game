@@ -11,7 +11,8 @@
       @include clearfix;
       margin:7px 0;
       width:100%;
-      border-bottom:1px solid #EEE;
+      border-bottom:3px solid #DFDFDF;
+      padding:0 0 3px;
       .team_a {
         text-align:left;
       }
@@ -19,19 +20,33 @@
         text-align:right;
       }
       .flag {
-        //text-align:center;
+        height:45px;
       }
       .country {
-        //text-align:center;
-        font-size:10px;
+        font-size:12px;
       }
       .infos {
         position:absolute;
-        top:0;
+        top:5px;
         left:0;
         width:100%;
         text-align:center;
         font-size:10px;
+        line-height:13px;
+        .date {
+          font-weight:bold;
+        }
+      }  
+      .button {
+        position:absolute;
+        bottom:6px;
+        left:0;
+        width:100%;
+        text-align:center;
+        a {
+          margin-top:1px;
+          padding:1px 6px;
+        }
       }
     }
   }

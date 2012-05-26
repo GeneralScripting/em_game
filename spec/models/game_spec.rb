@@ -5,6 +5,7 @@ describe Game do
   context "relations" do
     it { should belong_to(:team_a) }
     it { should belong_to(:team_b) }
+    it { should have_many(:bets) }
   end
 
   context "validations" do

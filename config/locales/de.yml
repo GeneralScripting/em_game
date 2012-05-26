@@ -9,6 +9,15 @@ de:
     index:
       matches: Spiele
       ranking: Rangliste
+  games:
+    game:
+      bet: tippen
+      change_bet: "Tipp (%{bet}) ändern"
+  bets:
+    new:
+      title: "Tipp abgeben"
+    form:
+      goals: Tore
   rounds:
     a: "Gruppe A"
     b: "Gruppe B"
@@ -18,3 +27,22 @@ de:
     last_8: Viertelfinale
     last_4: Halbfinale
     last_2: Finale
+  helpers:
+    select:
+      prompt: "Bitte wählen"
+    submit:
+      bet:
+        create: "Tipp abgeben »"
+        update: "Tipp ändern »"
+  time:
+    am: vorm.
+    formats:
+      dateonly: "%d.%m.%Y"
+      timeonly: "%H:%M Uhr"
+      default: "%d.%m.%Y %H:%M"
+      input: "%d.%m.%Y"
+      int: "%Y-%m-%d %H:%M"
+      long: "%d %B %Y %H:%M"
+      short: "%d %b %H:%M"
+      international: "%Y-%m-%d"
+    pm: nachm.
