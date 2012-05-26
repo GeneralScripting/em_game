@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   
 
   # validations
-  validates :email, :first_name, :last_name, :facebook_idx, :username, :locale, :presence => true
+  validates :email, :first_name, :last_name, :facebook_idx, :locale, :presence => true
 
   # plugins
   rank_by :score
