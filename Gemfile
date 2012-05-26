@@ -7,6 +7,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'mysql2'
+gem 'web_translate_it', :group => :development
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -35,6 +36,7 @@ gem "airbrake"
 gem 'hpricot'
 gem 'localized_country_select', :git => 'git://github.com/kristianmandrup/localized_country_select.git'
 
+gem 'rankitize'
 
 gem "rspec-rails", ">= 2.10.1", :group => [:development, :test]
 gem "factory_girl_rails", ">= 3.3.0", :group => [:development, :test]
