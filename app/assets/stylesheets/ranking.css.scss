@@ -1,0 +1,14 @@
+
+@import "compass";
+
+#ranking {
+  ol {
+    li {
+      @include clearfix;
+      img {
+        float:left;
+      }
+    }
+  }
+}
+
