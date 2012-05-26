@@ -1,6 +1,11 @@
 
 @import "compass";
 
+$background_color: #FFFFFF;
+
+body {
+  background:$background_color;
+}
 
 a {
   color:#000;
@@ -34,12 +39,14 @@ h2 {
 }
 
 header.navbar {
-  //@include background(linear-gradient(top, #3B5998, #FFFFFF));
-  @include background(linear-gradient(top, #133783, #FFFFFF));
+  //@include background(linear-gradient(top, #133783, #FFFFFF));
+  background:$background_color;
+  @include min-height(70px);
   nav {
-    background:transparent;
+    //background:transparent;
+    @include background(linear-gradient(top, #133783, #EEEEEE 10%, $background_color));
     @include box-shadow(none);
-    @include min-height(20px);
+    @include min-height(70px);
     .brand {
       position:absolute;
       top:7px;

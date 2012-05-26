@@ -10,6 +10,29 @@
       list-style-type:none;
       @include clearfix;
       margin:7px 0;
+      width:100%;
+      border-bottom:1px solid #EEE;
+      .team_a {
+        text-align:left;
+      }
+      .team_b {
+        text-align:right;
+      }
+      .flag {
+        //text-align:center;
+      }
+      .country {
+        //text-align:center;
+        font-size:10px;
+      }
+      .infos {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        text-align:center;
+        font-size:10px;
+      }
     }
   }
 }

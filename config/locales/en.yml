@@ -13,3 +13,24 @@ en:
     index:
       matches: "Matches"
       ranking: "Ranking"
+
+  rounds:
+    a: Group A
+    b: Group B
+    c: Group C
+    d: Group D
+    last_16: last 16
+    last_8: Quarterfinal
+    last_4: Semifinal
+    last_2: Final
+
+  time:
+    am: am
+    formats:
+      default: "%m/%d/%Y %I:%M %p"
+      input: "%m/%d/%Y"
+      int: "%Y-%m-%d %H:%M"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"
+      international: "%Y-%m-%d"
+    pm: pm

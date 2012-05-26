@@ -9,3 +9,12 @@ de:
     index:
       matches: Spiele
       ranking: Rangliste
+  rounds:
+    a: "Gruppe A"
+    b: "Gruppe B"
+    c: "Gruppe C"
+    d: "Gruppe D"
+    last_16: Achtelfinale
+    last_8: Viertelfinale
+    last_4: Halbfinale
+    last_2: Finale

@@ -15,4 +15,10 @@ class Game < ActiveRecord::Base
   # scopes
   scope :unfinished,  where( :end_at => nil )
 
+
+  def round
+    finals.nil? ? group : finals
+  end
+
+
 end
