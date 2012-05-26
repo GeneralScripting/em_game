@@ -12,4 +12,7 @@ class Game < ActiveRecord::Base
   as_enum :group,   { :a => 0, :b => 1, :c => 2, :d => 3 }
   as_enum :finals,  { :last_16 => 0, :last_8 => 1, :last_4 => 2, :last_2 => 3 }
 
+  # scopes
+  scope :unfinished,  where( :end_at => nil )
+
 end

@@ -1,6 +1,8 @@
-%tr
-	%td.team= game.team_a.country
-	%td.versus
-	%td.team= game.team_b.country
-	%td.group= game.team_a.group
-	%td.date= game.start_at.to_time
+%li.game.container_12
+  .team_a.grid_5
+    = image_tag("flags/#{game.team_a.country.downcase}.png")
+    = t(game.team_a.country, :scope => 'countries')
+  .vs.grid_2 vs.
+  .team_b.grid_5
+    = image_tag("flags/#{game.team_b.country.downcase}.png")
+    = t(game.team_b.country, :scope => 'countries')
