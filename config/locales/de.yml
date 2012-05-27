@@ -9,11 +9,21 @@ de:
     index:
       matches: Spiele
       ranking: Rangliste
+      faq: FAQ
+      authors: "Wer steckt dahinter?"
+    next_game:
+      title: "Das nächste Spiel"
+    current_games:
+      title: "Aktuelle Spiele"
   games:
     game:
       bet: tippen
       change_bet: "Tipp (%{result}) ändern"
+      goals_title: Tore
+      your_bet: "Dein Tipp"
   bets:
+    edit:
+      title: "Tipp ändern"
     new:
       title: "Tipp abgeben"
       info: |
