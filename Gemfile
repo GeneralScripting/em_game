@@ -7,6 +7,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'mysql2'
+
+gem 'execjs'
+gem 'therubyracer'
+
 gem 'web_translate_it', :group => :development
 gem 'dalli'
 gem 'savon'
