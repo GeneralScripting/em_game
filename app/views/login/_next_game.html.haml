@@ -1,0 +1,5 @@
+%h2= t('.title')
+
+#next_game_countdown
+  = image_tag 'current_game.png'
+  .countdown{ :'data-timeleft' => (@next_game.start_at - Time.now).to_i }

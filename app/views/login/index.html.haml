@@ -4,9 +4,18 @@
 
   #games.grid_4
     %h2= t('.matches')
-    %ol= render @games
-  .grid_5
-    abc
+    %ol.games= render @games
+  #center.grid_5
+    - if @current_games.present?
+      = render 'current_games'
+    - else
+      = render 'next_game'
+    #infos.container_12
+      .grid_5
+        %h2= link_to t('.faq'), page_path('faq'), :class => 'fancy'
+      .grid_7
+        %h2= link_to t('.authors'), page_path('testcloud'), :class => 'fancy'
+    
   #ranking.grid_3
     %h2= t('.ranking')
     %ol= render @users

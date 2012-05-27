@@ -13,15 +13,40 @@ en:
     index:
       matches: "Matches"
       ranking: "Ranking"
+      faq: "FAQ"
+      authors: "Who is behind this?"
+    next_game:
+      title: "The next match"
+    current_games:
+      title: "Current matche(s)"
 
   games:
     game:
       bet: bet
-      change_bet: "change bet (%{bet})"
+      change_bet: "change your bet (%{result})"
+      goals_title: "Goals"
+      your_bet: "Your bet"
 
   bets:
+    edit:
+      title: "Change your bet"
     new:
       title: "Place your bet"
+      info: |
+        Just guess the final result of the game (including penalties).
+        You will get points depending on how right you were:
+
+        Your guess: <b>Draw</b>
+        Match does not end in a draw: <b>0 points</b>
+        Match ends in a draw: <b>3 points</b>
+        ... + <b>5 points</b> if you guessed the goal count right
+
+        Your guess: <b>Team 1 wins</b>
+        Match ends in a draw: <b>0 points</b>
+        Team 2 wins: <b>0 points</b>
+        Team 1 wins: <b>3 points</b>
+        ... + <b>5 points</b> if you guessed both goal counts right
+        ... + <b>2 points</b> if you guessed only on goal count right
     form:
       goals: "Goals"
 

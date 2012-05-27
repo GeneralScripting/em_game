@@ -12,10 +12,25 @@ de:
   games:
     game:
       bet: tippen
-      change_bet: "Tipp (%{bet}) ändern"
+      change_bet: "Tipp (%{result}) ändern"
   bets:
     new:
       title: "Tipp abgeben"
+      info: |
+          Trage einfach die von dir geschätzten Tore ein (ggf. inkl. Elfmeterschießen).
+          Du erhältst Punkte je nachdem, wie gut dein Tipp war:
+
+          Deine Vorhersage: <b>Unentschieden</b>
+          Tatsächliches Ergebnis kein unentschieden: <b>0 Punkte</b>
+          Tatsächliches Ergebnis unentschieden: <b>3 Punkte</b>
+          ... + <b>5 Punkte</b> bei korrekter Torzahl
+
+          Deine Vorhersage: <b>Team 1 gewinnt</b>
+          Tatsächliches Ergebnis unentschieden: <b>0 Punkte</b>
+          Tatsächliches Ergebnis Team 2 gewinnt: <b>0 Punkte</b>
+          Tatsächliches Ergebnis Team 1 gewinnt: <b>3 Punkte</b>
+          ... + <b>5 Punkte</b> wenn beide Torzahlen korrekt sind
+          ... + <b>2 Punkte</b> wenn nur eine der Torzahlen korrekt ist
     form:
       goals: Tore
   rounds:

@@ -50,11 +50,11 @@ Game.create!(:team_a => se, :team_b => gb, :group => :d, :start_at => Time.parse
 Game.create!(:team_a => gr, :team_b => ru, :group => :a, :start_at => Time.parse('2012-06-16 20:45'))
 Game.create!(:team_a => cz, :team_b => pl, :group => :a, :start_at => Time.parse('2012-06-16 20:45'))
 Game.create!(:team_a => pt, :team_b => nl, :group => :b, :start_at => Time.parse('2012-06-17 20:45'))
-Game.create!(:team_a => dk, :team_b => de, :group => :b, :start_at => Time.parse('2012-06-09 20:45'))
-Game.create!(:team_a => hr, :team_b => es, :group => :c, :start_at => Time.parse('2012-06-09 20:45'))
-Game.create!(:team_a => it, :team_b => ir, :group => :c, :start_at => Time.parse('2012-06-09 20:45'))
-Game.create!(:team_a => se, :team_b => fr, :group => :d, :start_at => Time.parse('2012-06-09 20:45'))
-Game.create!(:team_a => gb, :team_b => ua, :group => :d, :start_at => Time.parse('2012-06-09 20:45'))
+Game.create!(:team_a => dk, :team_b => de, :group => :b, :start_at => Time.parse('2012-06-17 20:45'))
+Game.create!(:team_a => hr, :team_b => es, :group => :c, :start_at => Time.parse('2012-06-18 20:45'))
+Game.create!(:team_a => it, :team_b => ir, :group => :c, :start_at => Time.parse('2012-06-18 20:45'))
+Game.create!(:team_a => se, :team_b => fr, :group => :d, :start_at => Time.parse('2012-06-19 20:45'))
+Game.create!(:team_a => gb, :team_b => ua, :group => :d, :start_at => Time.parse('2012-06-19 20:45'))
 
 #1/4 Finale
 

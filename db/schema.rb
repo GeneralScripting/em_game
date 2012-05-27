@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120526195335) do
+ActiveRecord::Schema.define(:version => 20120527195332) do
 
   create_table "bets", :force => true do |t|
     t.integer  "game_id"
@@ -43,11 +43,13 @@ ActiveRecord::Schema.define(:version => 20120526195335) do
     t.text     "comment"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
+    t.integer  "oldb_idx"
   end
 
   add_index "games", ["end_at"], :name => "index_games_on_end_at"
   add_index "games", ["finals_cd"], :name => "index_games_on_finals_cd"
   add_index "games", ["group_cd"], :name => "index_games_on_group_cd"
+  add_index "games", ["oldb_idx"], :name => "index_games_on_oldb_idx"
   add_index "games", ["start_at"], :name => "index_games_on_start_at"
   add_index "games", ["team_a_goals"], :name => "index_games_on_team_a_goals"
   add_index "games", ["team_a_id"], :name => "index_games_on_team_a_id"

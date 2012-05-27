@@ -38,6 +38,24 @@ h2 {
   margin-top:20px;
 }
 
+#center {
+  h2 {
+    text-align:center;
+  }
+}
+
+#infos {
+  text-align:center;
+  h2 {
+    font-size:22px;
+  }
+  a {
+    @include inline-block;
+    padding-left: 23px;
+    background:transparent url(asset_path('info.png', image)) no-repeat 0 7px;
+  }
+}
+
 header.navbar {
   //@include background(linear-gradient(top, #133783, #FFFFFF));
   background:$background_color;

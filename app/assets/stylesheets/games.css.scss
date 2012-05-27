@@ -1,53 +1,129 @@
 
 @import "compass";
 
-#games {
-  ol {
-    margin:12px 0;
+ol.games {
+  margin:12px 0;
+  list-style-type:none;
+  li {
+    position:relative;
     list-style-type:none;
-    li {
-      position:relative;
-      list-style-type:none;
-      @include clearfix;
-      margin:7px 0;
-      width:100%;
-      border-bottom:3px solid #DFDFDF;
-      padding:0 0 3px;
-      .team_a {
-        text-align:left;
+    @include clearfix;
+    margin:7px 0;
+    width:100%;
+    border-bottom:3px solid #DFDFDF;
+    padding:0 0 3px;
+    &.pending {
+      .flag {
+        margin-top:7px;
+        height:32px;
       }
-      .team_b {
-        text-align:right;
+      .country {
+        font-size:11px;
       }
+    }
+    &.running,
+    &.ended {
       .flag {
         height:45px;
       }
       .country {
         font-size:12px;
-      }
-      .infos {
-        position:absolute;
-        top:5px;
-        left:0;
-        width:100%;
-        text-align:center;
-        font-size:10px;
-        line-height:13px;
-        .date {
-          font-weight:bold;
-        }
-      }  
-      .button {
-        position:absolute;
-        bottom:6px;
-        left:0;
-        width:100%;
-        text-align:center;
-        a {
-          margin-top:1px;
-          padding:1px 6px;
-        }
+        font-weight:bold;
       }
     }
+    .team_a {
+      text-align:left;
+    }
+    .team_b {
+      text-align:right;
+    }
+    .infos {
+      position:absolute;
+      top:5px;
+      left:0;
+      width:100%;
+      text-align:center;
+      font-size:10px;
+      line-height:13px;
+      .date {
+        font-weight:bold;
+      }
+    }  
+    .button {
+      position:absolute;
+      bottom:6px;
+      left:0;
+      width:100%;
+      text-align:center;
+      a {
+        margin-top:1px;
+        padding:1px 6px;
+      }
+    }
+    .current_infos {
+      position:absolute;
+      top:4px;
+      left:0;
+      width:100%;
+      text-align:center;
+      .goals {
+        font-size:26px;
+        line-height:17px;
+        .goals_title {
+          font-size:10px;
+        }
+        .goals_a,
+        .goals_b {
+          position:absolute;
+          top:0;
+          width: 20%;
+          text-align: center;
+          .value {
+            font-family:"LondrinaSolidRegular";
+          }
+        }
+        .goals_a {
+          left: 18%;
+        }
+        .goals_b {
+          right: 18%;
+        }
+      }
+      .your_bet {
+        font-size:10px;
+        .dp, .bet_a, .bet_b {
+          font-size:18px;
+          font-family:"LondrinaOutlineRegular";
+        }
+      }
+    }  
+    .live_round {
+      position:absolute;
+      bottom:2px;
+      left:0;
+      width:100%;
+      text-align:center;
+      font-size:10px;
+      color:#999;
+    }
+  }
+}
+
+#next_game_countdown {
+  position:relative;
+  height:59px;
+  @include box-sizing(border-box);
+  padding: 17px 26px 0;
+  font-size: 30px;
+  text-align: center;
+  margin: 16px 0 23px 30px;
+  border:2px solid #DFDFDF;
+  border-left:0;
+  font-family:"LondrinaSolidRegular";
+  img {
+    position:absolute;
+    top:-3px;
+    left:-30px;
+    //background:transparent url(asset_path('current_game.png', image)) no-repeat 0 0;
   }
 }

@@ -1,4 +1,6 @@
 
-%h2= t('.title')
+%h2
+  = t('.title')
+  %span{ :title => simple_format(t('.info')) }= image_tag 'info.png'
 
 = render 'form'
