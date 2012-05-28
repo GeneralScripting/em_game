@@ -16,8 +16,12 @@ class Game < ActiveRecord::Base
   # scopes
   scope :pending,           lambda { where( 'games.start_at > ?', Time.current ).where( :end_at => nil ) }
   scope :running,           lambda { where( 'games.start_at <= ?', Time.current ).where( :end_at => nil ) }
+  scope :ended,             where( 'games.end_at IS NOT NULL' )
   scope :next,              lambda { pending.order('start_at') }
   scope :without_oldb_idx,  where( :oldb_idx => nil )
+
+  # hooks
+  after_save :set_scores
 
 
   def round
@@ -50,6 +54,20 @@ class Game < ActiveRecord::Base
   end
 
 
+  def draw?
+    team_a_goals == team_b_goals
+  end
+
+  def team_a_won?
+    team_a_goals > team_b_goals
+  end
+
+  def team_b_won?
+    team_b_goals > team_a_goals
+  end
+
+
+
   def update_from_oldb( oldb_match )
     self.team_a_goals = oldb_match[:points_team1].to_i  unless oldb_match[:points_team1].to_i == -1
     self.team_b_goals = oldb_match[:points_team2].to_i  unless oldb_match[:points_team2].to_i == -1
@@ -59,6 +77,15 @@ class Game < ActiveRecord::Base
   def end!
     self.end_at = Time.now
     save!
+  end
+
+
+
+
+ protected
+
+  def set_scores
+    bets.map(&:score!)  if ended?
   end
 
 end

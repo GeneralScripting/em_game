@@ -40,4 +40,10 @@ class User < ActiveRecord::Base
   end
 
 
+  def update_score!
+    self.score = bets.scored.sum(:score)
+    save!
+  end
+
+
 end

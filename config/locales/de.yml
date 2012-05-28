@@ -1,4 +1,6 @@
 de:
+  colorbox:
+    close: schließen
   layouts:
     navigation:
       logo: "EM Tippspiel"
@@ -11,16 +13,21 @@ de:
       ranking: Rangliste
       faq: FAQ
       authors: "Wer steckt dahinter?"
+      how: "So funktioniert's"
     next_game:
       title: "Das nächste Spiel"
     current_games:
       title: "Aktuelle Spiele"
+    past_games:
+      title: "Vergangene Spiele"
   games:
     game:
       bet: tippen
       change_bet: "Tipp (%{result}) ändern"
       goals_title: Tore
       your_bet: "Dein Tipp"
+      no_bet: ~
+      your_points: "Deine Punkte"
   bets:
     edit:
       title: "Tipp ändern"
@@ -52,6 +59,30 @@ de:
     last_8: Viertelfinale
     last_4: Halbfinale
     last_2: Finale
+  pages:
+    faq: |
+        <h2>FAQ - Häufig gestellte Fragen</h2>
+        <h3>Wieviel Punkte gibt's wofür?</h3>
+        <p>Du trägst für jedes Spiel die von dir geschätzten Tore ein (ggf. inkl. Elfmeterschießen).<br />
+        Du erhältst Punkte je nachdem, wie gut dein Tipp war:</p>
+        <p>Deine Vorhersage: <b>Unentschieden</b><br />
+        Tatsächliches Ergebnis kein unentschieden: <b>0 Punkte</b><br />
+        Tatsächliches Ergebnis unentschieden: <b>3 Punkte</b><br />
+        ... + <b>5 Punkte</b> bei korrekter Torzahl</p>
+        <p>Deine Vorhersage: <b>Team 1 gewinnt</b><br />
+        Tatsächliches Ergebnis unentschieden: <b>0 Punkte</b><br />
+        Tatsächliches Ergebnis Team 2 gewinnt: <b>0 Punkte</b><br />
+        Tatsächliches Ergebnis Team 1 gewinnt: <b>3 Punkte</b><br />
+        ... + <b>5 Punkte</b> wenn beide Torzahlen korrekt sind<br />
+        ... + <b>2 Punkte</b> wenn nur eine der Torzahlen korrekt ist</p>
+        <h3>Gibt es etwas zu gewinnen?</h3>
+        <p>Nö, außer vielleicht Ruhm und Ehre.<br />
+        Wozu dann das Tippspiel, fragst du? Warum haben wir es überhaupt entwickelt? Nun, weil wir können und weil es Spaß macht :)</p>
+    howto: |
+        <h2>So funktioniert's</h2>
+        <p>Dieses kleine Spiel erlaubt dir die Ergebnisse aller Spiele der EM 2012 zu tippen.<br />
+        Je richtiger deine Tipps sind, desto mehr Punkte erhältst du.<br />
+        Auf geht's, zeig der Welt dein Expertenwissen. Viel Spaß!</p>
   helpers:
     select:
       prompt: "Bitte wählen"

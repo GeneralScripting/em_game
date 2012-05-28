@@ -28,7 +28,7 @@ namespace :openliga do
         oldb_match = response[:matchdata].select {|m| m[:match_id].eql?(game.oldb_idx) }.first
         game.update_from_oldb( oldb_match )
         game.end_at = Time.current            if oldb_match[:match_is_finished]
-        if game.team_a_goals_changed? || game.team_b_goals_changed?
+        if game.team_a_goals_changed? || game.team_b_goals_changed? || game.end_at_changed?
           live_updates << { :game_id => game.id, :team_a => game.team_a_goals, :team_b => game.team_b_goals, :ended => game.ended? }
         end
         game.save!

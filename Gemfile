@@ -15,6 +15,7 @@ gem 'web_translate_it', :group => :development
 gem 'dalli'
 gem 'savon'
 gem 'nginx_stream_pusher'
+gem 'redcarpet'#, :git => 'git://github.com/tanoku/redcarpet.git'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -53,8 +54,8 @@ gem "guard", ">= 0.6.2", :group => :development
 gem 'rb-fsevent', :group => :development
 gem 'growl', :group => :development
 group :darwin do
-  gem 'libnotify', :group => :development
-  gem 'rb-inotify', :group => :development
+  #gem 'libnotify', :group => :development
+  #gem 'rb-inotify', :group => :development
 end
 
 #case HOST_OS

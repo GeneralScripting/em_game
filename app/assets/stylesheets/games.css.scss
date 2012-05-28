@@ -12,7 +12,8 @@ ol.games {
     width:100%;
     border-bottom:3px solid #DFDFDF;
     padding:0 0 3px;
-    &.pending {
+    &.pending,
+    &.ended {
       .flag {
         margin-top:7px;
         height:32px;
@@ -21,8 +22,7 @@ ol.games {
         font-size:11px;
       }
     }
-    &.running,
-    &.ended {
+    &.running {
       .flag {
         height:45px;
       }
@@ -96,7 +96,22 @@ ol.games {
           font-family:"LondrinaOutlineRegular";
         }
       }
-    }  
+    }
+    &.ended {
+      .current_infos {
+        .goals {
+          font-size:22px;
+          line-height:15px;
+        }
+      }
+      .your_points {
+        font-size:10px;
+        .points {
+          font-size:18px;
+          font-family:"LondrinaOutlineRegular";
+        }
+      }
+    }
     .live_round {
       position:absolute;
       bottom:2px;
@@ -126,4 +141,12 @@ ol.games {
     left:-30px;
     //background:transparent url(asset_path('current_game.png', image)) no-repeat 0 0;
   }
+}
+
+#past_games_container {
+  position:relative;
+  top:16px;
+  border-top:3px solid #DFDFDF;
+  clear:left;
+  padding:12px 0;
 }

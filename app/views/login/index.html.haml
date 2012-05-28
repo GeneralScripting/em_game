@@ -11,10 +11,11 @@
     - else
       = render 'next_game'
     #infos.container_12
-      .grid_5
+      .grid_8
+        %h2= link_to t('.how'), page_path('howto'), :class => 'fancy'
+      .grid_4
         %h2= link_to t('.faq'), page_path('faq'), :class => 'fancy'
-      .grid_7
-        %h2= link_to t('.authors'), page_path('testcloud'), :class => 'fancy'
+    = render 'past_games'
     
   #ranking.grid_3
     %h2= t('.ranking')

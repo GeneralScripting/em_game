@@ -1,0 +1,4 @@
+- unless @past_games.empty?
+  #past_games_container
+    %h2= t('.title')
+    %ol#past_games.games= render @past_games

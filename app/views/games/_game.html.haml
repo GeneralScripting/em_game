@@ -1,10 +1,10 @@
 - view ||= nil
 %li.game.container_16{ :id => "game#{"_#{view}" if view}_#{game.id}", :class => "game_#{game.id} #{game.status}" }
   .team_a.grid_8
-    .flag.flaga= image_tag("flags/#{game.pending? ? 32 : 48}/#{game.team_a.country.downcase}.png")
+    .flag.flaga= image_tag("flags/#{game.running? ? 48 : 32}/#{game.team_a.country.downcase}.png")
     .country= t(game.team_a.country, :scope => 'countries')
   .team_b.grid_8
-    .flag.flagb= image_tag("flags/#{game.pending? ? 32 : 48}/#{game.team_b.country.downcase}.png")
+    .flag.flagb= image_tag("flags/#{game.running? ? 48 : 32}/#{game.team_b.country.downcase}.png")
     .country= t(game.team_b.country, :scope => 'countries')
   - if game.pending?
     .infos
@@ -31,6 +31,22 @@
           %span.bet_a= bet.team_a_goals
           %span.dp :
           %span.bet_b= bet.team_b_goals
+        - else
+          %p.no_bet= t('.no_bet')
+    .live_round= t(game.round, :scope => 'rounds')
+  - elsif game.ended?
+    .current_infos
+      .goals
+        .goals_a
+          .goals_title= t('.goals_title')
+          .value= game.team_a_goals || 0
+        .goals_b
+          .goals_title= t('.goals_title')
+          .value= game.team_b_goals || 0
+      .your_points
+        .bet_title= t('.your_points')
+        - if bet = @bets.select {|b| b.game_id == game.id }.first
+          %span.points= bet.score || 0
         - else
           %p.no_bet= t('.no_bet')
     .live_round= t(game.round, :scope => 'rounds')

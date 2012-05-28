@@ -2,6 +2,10 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+
+  colorbox:
+    close: "close"
+
   layouts:
     navigation:
       logo: "EM Betting Game"
@@ -15,10 +19,13 @@ en:
       ranking: "Ranking"
       faq: "FAQ"
       authors: "Who is behind this?"
+      how: "How it works"
     next_game:
       title: "The next match"
     current_games:
       title: "Current matche(s)"
+    past_games:
+      title: "Past matches"
 
   games:
     game:
@@ -26,6 +33,8 @@ en:
       change_bet: "change your bet (%{result})"
       goals_title: "Goals"
       your_bet: "Your bet"
+      no_bet: "---"
+      your_points: "Your points"
 
   bets:
     edit:
@@ -59,6 +68,33 @@ en:
     last_8: Quarterfinal
     last_4: Semifinal
     last_2: Final
+
+  pages:
+    faq: |
+      <h2>FAQ - Frequently Asked Questions</h2>
+      <h3>How many points for what?</h3>
+      <p>Just guess the final result of the game (including penalties).<br />
+      You will get points depending on how right you were:</p>
+      <p>Your guess: <b>Draw</b><br />
+      Match does not end in a draw: <b>0 points</b><br />
+      Match ends in a draw: <b>3 points</b><br />
+      ... + <b>5 points</b> if you guessed the goal count right</p>
+      <p>Your guess: <b>Team 1 wins</b><br />
+      Match ends in a draw: <b>0 points</b><br />
+      Team 2 wins: <b>0 points</b><br />
+      Team 1 wins: <b>3 points</b><br />
+      ... + <b>5 points</b> if you guessed both goal counts right<br />
+      ... + <b>2 points</b> if you guessed only on goal count right</p>
+      <h3>Is there something to win?</h3>
+      <p>Nope, except maybe fame.<br />
+      Why did we create the betting game then? Well, because we can and it is fun :)</p>
+    howto: |
+      <h2>How it works</h2>
+      <p>This little game lets you guess the outcome of all matches of the EM 2012.<br />
+      If you guess right you earn points (see FAQ for details).<br />
+      Now show the world your expertise and have fun!</p>
+
+      
 
   helpers:
     select:
