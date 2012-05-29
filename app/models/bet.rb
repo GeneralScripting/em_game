@@ -14,6 +14,7 @@ class Bet < ActiveRecord::Base
   scope :scored,  where( 'bets.score IS NOT NULL AND bets.score != 0' )
 
   # hooks
+  before_create :thank_you_points
   after_save :update_user_score
 
 
@@ -37,32 +38,30 @@ class Bet < ActiveRecord::Base
 
 
   def score!
-    the_score = 0
     if game.draw?
       if draw?
-        the_score = 3
-        the_score += 5  if game.team_a_goals == team_a_goals
+        self.score += 3
+        self.score += 5  if game.team_a_goals == team_a_goals
       end
     elsif game.team_a_won?
       if team_a_won?
-        the_score = 3
+        self.score += 3
         if game.team_a_goals == team_a_goals && game.team_b_goals == team_b_goals
-          the_score += 5
+          self.score += 5
         elsif game.team_a_goals == team_a_goals || game.team_b_goals == team_b_goals
-          the_score += 2
+          self.score += 2
         end
       end
     else # team_b_won must be true
       if team_b_won?
-        the_score = 3
+        self.score += 3
         if game.team_a_goals == team_a_goals && game.team_b_goals == team_b_goals
-          the_score += 5
+          self.score += 5
         elsif game.team_a_goals == team_a_goals || game.team_b_goals == team_b_goals
-          the_score += 2
+          self.score += 2
         end
       end
     end
-    self.score = the_score
     save!
   end
 
@@ -70,6 +69,10 @@ class Bet < ActiveRecord::Base
 
 
  protected
+
+  def thank_you_points
+    self.score = 1
+  end
 
   def game_not_started_yet
     errors.add(:base, :invalid) unless game && game.pending?
