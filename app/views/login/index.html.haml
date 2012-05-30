@@ -10,11 +10,6 @@
       = render 'current_games'
     - else
       = render 'next_game'
-    #infos.container_12
-      .grid_8
-      .grid_4
-        - user_friends = current_facebook_user.friends.map(&:id)
-        = fb_multi_friend_selector("Invite your friends to check out this site", :showborder => true, :exclude_ids => user_friends)
     = render 'past_games'
     
     

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120527195332) do
+ActiveRecord::Schema.define(:version => 20120530082312) do
 
   create_table "bets", :force => true do |t|
     t.integer  "game_id"
@@ -55,6 +55,20 @@ ActiveRecord::Schema.define(:version => 20120527195332) do
   add_index "games", ["team_a_id"], :name => "index_games_on_team_a_id"
   add_index "games", ["team_b_goals"], :name => "index_games_on_team_b_goals"
   add_index "games", ["team_b_id"], :name => "index_games_on_team_b_id"
+
+  create_table "invitations", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "request_id"
+    t.string   "guest_id"
+    t.datetime "accepted_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "invitations", ["accepted_at"], :name => "index_invitations_on_accepted_at"
+  add_index "invitations", ["guest_id"], :name => "index_invitations_on_guest_id"
+  add_index "invitations", ["request_id"], :name => "index_invitations_on_request_id"
+  add_index "invitations", ["user_id"], :name => "index_invitations_on_user_id"
 
   create_table "teams", :force => true do |t|
     t.string   "country"

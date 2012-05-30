@@ -24,4 +24,5 @@ class ApplicationController < ActionController::Base
     I18n.locale = I18n.available_locales.include?(@current_user.short_locale.to_sym) ? @current_user.short_locale : :en
   end
 
+
 end
