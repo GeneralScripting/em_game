@@ -108,3 +108,12 @@ header.navbar {
     font-family:"LondrinaOutlineRegular";
   }
 }
+
+.how_to{
+  position: absolute;
+  right:305px;
+  top:-8px;
+  .btn-mini{
+    padding: 2px 6px !important;
+  }
+}

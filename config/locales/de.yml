@@ -7,13 +7,13 @@ de:
       powered_by: "powered by <a href='https://www.testcloud.de/' target='_blank'><span class='tclogo'>test<span class='cloud'>Cloud</span></span></a>"
       your_score: "Deine Punkte"
       your_rank: "Dein Rang"
+      faq: "FAQ"
+      how: "So funktioniert's"
   login:
     index:
       matches: Spiele
       ranking: Rangliste
-      faq: FAQ
       authors: "Wer steckt dahinter?"
-      how: "So funktioniert's"
     next_game:
       title: "Das nächste Spiel"
     current_games:

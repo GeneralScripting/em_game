@@ -3,6 +3,10 @@
   .logo= t('.logo')
   .sub= t('.powered_by').html_safe
 
+.how_to
+  = link_to t('.how'), page_path('howto'), :class => ['fancy','btn','btn-mini','btn-default']
+  = link_to t('.faq'), page_path('faq'), :class => ['fancy','btn','btn-mini','btn-default']
+
 #top_stats
   .item
     %label= t('.your_score')
