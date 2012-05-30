@@ -1,2 +1,2 @@
-= cache "upcoming_games/#{Game.pending.sum(:start_at)}" do
+= cache "upcoming_games/#{current_user.cache_key}/#{Game.pending.sum(:start_at)}" do
   = render @games

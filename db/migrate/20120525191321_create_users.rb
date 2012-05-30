@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :first_name, :last_name, :username
       t.string :image_url, :large_image_url, :small_image_url, :square_image_url
       t.string :facebook_idx
-      t.integer :score
+      t.integer :score, :default => 0
 
       t.timestamps
     end

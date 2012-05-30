@@ -4,6 +4,6 @@
 
 jQuery ->
 
-  $("#new_bet").live "ajax:beforeSend", ->
+  $("#new_bet, form.edit_bet").live "ajax:beforeSend", ->
     $('#cboxLoadedContent').hide()
     $('#cboxLoadingOverlay').show()

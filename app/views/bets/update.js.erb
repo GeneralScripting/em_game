@@ -1,0 +1,8 @@
+<% if @bet.errors.empty? %>
+  $.colorbox.close();
+  $("#game_<%= @bet.game_id %>").replaceWith("<%= j render(@bet.game) %>");
+<% else %>
+  $("form.edit_bet").replaceWith("<%= j render('form') %>");
+  $('#cboxLoadingOverlay').hide();
+  $('#cboxLoadedContent').show();
+<% end %>
