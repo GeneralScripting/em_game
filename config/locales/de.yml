@@ -37,15 +37,17 @@ de:
           Trage einfach die von dir geschätzten Tore ein (ggf. inkl. Elfmeterschießen).
           Du erhältst Punkte je nachdem, wie gut dein Tipp war:
 
+          <b>1 Punkt</b> für die Abgabe des Tipps.
+
           Deine Vorhersage: <b>Unentschieden</b>
-          Tatsächliches Ergebnis kein unentschieden: <b>0 Punkte</b>
-          Tatsächliches Ergebnis unentschieden: <b>3 Punkte</b>
+          Tatsächliches Ergebnis kein unentschieden: + <b>0 Punkte</b>
+          Tatsächliches Ergebnis unentschieden: + <b>3 Punkte</b>
           ... + <b>5 Punkte</b> bei korrekter Torzahl
 
           Deine Vorhersage: <b>Team 1 gewinnt</b>
-          Tatsächliches Ergebnis unentschieden: <b>0 Punkte</b>
-          Tatsächliches Ergebnis Team 2 gewinnt: <b>0 Punkte</b>
-          Tatsächliches Ergebnis Team 1 gewinnt: <b>3 Punkte</b>
+          Tatsächliches Ergebnis unentschieden: + <b>0 Punkte</b>
+          Tatsächliches Ergebnis Team 2 gewinnt: + <b>0 Punkte</b>
+          Tatsächliches Ergebnis Team 1 gewinnt: + <b>3 Punkte</b>
           ... + <b>5 Punkte</b> wenn beide Torzahlen korrekt sind
           ... + <b>2 Punkte</b> wenn nur eine der Torzahlen korrekt ist
     form:
@@ -65,14 +67,15 @@ de:
         <h3>Wieviel Punkte gibt's wofür?</h3>
         <p>Du trägst für jedes Spiel die von dir geschätzten Tore ein (ggf. inkl. Elfmeterschießen).<br />
         Du erhältst Punkte je nachdem, wie gut dein Tipp war:</p>
+        <p><b>1 Punkt</b> für die Abgabe des Tipps.</p>
         <p>Deine Vorhersage: <b>Unentschieden</b><br />
-        Tatsächliches Ergebnis kein unentschieden: <b>0 Punkte</b><br />
-        Tatsächliches Ergebnis unentschieden: <b>3 Punkte</b><br />
+        Tatsächliches Ergebnis kein unentschieden: + <b>0 Punkte</b><br />
+        Tatsächliches Ergebnis unentschieden: + <b>3 Punkte</b><br />
         ... + <b>5 Punkte</b> bei korrekter Torzahl</p>
         <p>Deine Vorhersage: <b>Team 1 gewinnt</b><br />
-        Tatsächliches Ergebnis unentschieden: <b>0 Punkte</b><br />
-        Tatsächliches Ergebnis Team 2 gewinnt: <b>0 Punkte</b><br />
-        Tatsächliches Ergebnis Team 1 gewinnt: <b>3 Punkte</b><br />
+        Tatsächliches Ergebnis unentschieden: + <b>0 Punkte</b><br />
+        Tatsächliches Ergebnis Team 2 gewinnt: + <b>0 Punkte</b><br />
+        Tatsächliches Ergebnis Team 1 gewinnt: + <b>3 Punkte</b><br />
         ... + <b>5 Punkte</b> wenn beide Torzahlen korrekt sind<br />
         ... + <b>2 Punkte</b> wenn nur eine der Torzahlen korrekt ist</p>
         <h3>Gibt es etwas zu gewinnen?</h3>

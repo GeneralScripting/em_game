@@ -5,19 +5,29 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-  before_filter :redirect_unless_in_facebook
   before_filter :current_user
   before_filter :set_locale
 
 
 
 
-  def redirect_unless_in_facebook
-    redirect_to 'https://apps.facebook.com/em_game/'  if current_facebook_user.nil?
+  def force_user_reload!
+    @current_user     = nil
+    session[:user_id] = nil
   end
 
   def current_user
-    @current_user ||= User.find_or_create_from_facebook( current_facebook_user.fetch )
+    @current_user ||= find_user_from_session || find_or_create_user_from_facebook
+  end
+
+  def find_user_from_session
+    User.find_by_id(session[:user_id])  if session[:user_id]
+  end
+
+  def find_or_create_user_from_facebook
+    user = User.find_or_create_from_facebook( current_facebook_user )
+    session[:user_id] = user.id
+    user
   end
 
   def set_locale

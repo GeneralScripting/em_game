@@ -1,6 +1,3 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
 
   colorbox:
@@ -45,15 +42,17 @@ en:
         Just guess the final result of the game (including penalties).
         You will get points depending on how right you were:
 
+        <b>1 point</b> for placing a bet.
+
         Your guess: <b>Draw</b>
-        Match does not end in a draw: <b>0 points</b>
-        Match ends in a draw: <b>3 points</b>
+        Match does not end in a draw: + <b>0 points</b>
+        Match ends in a draw: + <b>3 points</b>
         ... + <b>5 points</b> if you guessed the goal count right
 
         Your guess: <b>Team 1 wins</b>
-        Match ends in a draw: <b>0 points</b>
-        Team 2 wins: <b>0 points</b>
-        Team 1 wins: <b>3 points</b>
+        Match ends in a draw: + <b>0 points</b>
+        Team 2 wins: + <b>0 points</b>
+        Team 1 wins: + <b>3 points</b>
         ... + <b>5 points</b> if you guessed both goal counts right
         ... + <b>2 points</b> if you guessed only on goal count right
     form:
@@ -75,14 +74,15 @@ en:
       <h3>How many points for what?</h3>
       <p>Just guess the final result of the game (including penalties).<br />
       You will get points depending on how right you were:</p>
+      <p><b>1 point</b> for placing your bet.</p>
       <p>Your guess: <b>Draw</b><br />
-      Match does not end in a draw: <b>0 points</b><br />
-      Match ends in a draw: <b>3 points</b><br />
+      Match does not end in a draw: + <b>0 points</b><br />
+      Match ends in a draw: + <b>3 points</b><br />
       ... + <b>5 points</b> if you guessed the goal count right</p>
       <p>Your guess: <b>Team 1 wins</b><br />
-      Match ends in a draw: <b>0 points</b><br />
-      Team 2 wins: <b>0 points</b><br />
-      Team 1 wins: <b>3 points</b><br />
+      Match ends in a draw: + <b>0 points</b><br />
+      Team 2 wins: + <b>0 points</b><br />
+      Team 1 wins: + <b>3 points</b><br />
       ... + <b>5 points</b> if you guessed both goal counts right<br />
       ... + <b>2 points</b> if you guessed only on goal count right</p>
       <h3>Is there something to win?</h3>

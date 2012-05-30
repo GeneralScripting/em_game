@@ -1,0 +1,69 @@
+fr:
+  colorbox:
+    close: ~
+  layouts:
+    navigation:
+      logo: ~
+      powered_by: ~
+      your_score: ~
+      your_rank: ~
+      invite: ~
+      how: ~
+      faq: ~
+  login:
+    index:
+      matches: ~
+      ranking: ~
+    next_game:
+      title: ~
+    current_games:
+      title: ~
+    past_games:
+      title: ~
+  games:
+    game:
+      bet: ~
+      change_bet: ~
+      goals_title: ~
+      your_bet: ~
+      no_bet: ~
+      your_points: ~
+  bets:
+    edit:
+      title: ~
+    new:
+      title: ~
+      info: ~
+    form:
+      goals: ~
+  rounds:
+    a: ~
+    b: ~
+    c: ~
+    d: ~
+    last_16: ~
+    last_8: ~
+    last_4: ~
+    last_2: ~
+  pages:
+    faq: ~
+    howto: ~
+  helpers:
+    select:
+      prompt: ~
+    submit:
+      bet:
+        create: ~
+        update: ~
+  time:
+    am: ~
+    formats:
+      dateonly: ~
+      timeonly: ~
+      default: ~
+      input: ~
+      int: ~
+      long: ~
+      short: ~
+      international: ~
+    pm: ~

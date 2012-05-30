@@ -1,4 +1,6 @@
 class LoginController < ApplicationController
+  prepend_before_filter :force_user_reload!,          :only => [:index, :log_invitation]
+  prepend_before_filter :redirect_unless_in_facebook, :only => [:index]
   before_filter :load_ranking
   
   def index 
@@ -25,6 +27,10 @@ class LoginController < ApplicationController
 
 
  protected
+
+   def redirect_unless_in_facebook
+     redirect_to 'https://apps.facebook.com/em_game/'  if params[:signed_request].nil?
+   end
 
   def load_ranking
     @users = User.order('score DESC').limit(25)
