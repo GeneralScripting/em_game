@@ -51,7 +51,7 @@ while($running) do
       begin
         channel = 'em_game_updates'
         NginxStreamPusher::publish!(channel, { :updates => live_updates }.to_json)
-      rescue Timeout::Error, Errno::EINVAL, Errno::ECONNRESET, EOFError, Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError, Net::ProtocolError => e
+      rescue Errno::ECONNREFUSED, Timeout::Error, Errno::EINVAL, Errno::ECONNRESET, EOFError, Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError, Net::ProtocolError => e
         # report but ignore
         Airbrake.notify(e)
       end

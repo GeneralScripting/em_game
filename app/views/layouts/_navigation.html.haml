@@ -9,9 +9,9 @@
   = link_to t('.invite'), "", :class => ['fancy','btn','btn-mini','btn-default'], :id => "invite_friends" 
 
 #top_stats
-  .item
+  .item.your_score
     %label= t('.your_score')
     .number= @current_user.score || 0
-  .item
+  .item.your_rank
     %label= t('.your_rank')
     .number= @current_user.score_ranking
