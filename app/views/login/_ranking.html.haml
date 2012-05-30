@@ -1,2 +1,2 @@
-= cache "ranking/#{User.sum('score + id').to_i}" do
+= cache "ranking/#{User.sum('COALESCE(score, 0) + id').to_i}" do
   = render @users
