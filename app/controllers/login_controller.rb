@@ -15,6 +15,7 @@ class LoginController < ApplicationController
     params[:invited_users].each do |invited_user_id|
       Invitation.create(:user_id => current_user.id, :request_id => params[:request_id], :guest_id => invited_user_id)
     end
+    head :ok
   end
   
 
