@@ -85,7 +85,10 @@ class Game < ActiveRecord::Base
  protected
 
   def set_scores
-    bets.map(&:score!)  if ended?
+    if ended? && end_at_changed?
+      bets.map(&:score!)
+      User.score_change!
+    end
   end
 
 end

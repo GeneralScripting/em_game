@@ -1,5 +1,5 @@
 class Bet < ActiveRecord::Base
-  attr_accessible :game, :game_id, :score, :team_a_goals, :team_b_goals, :user
+  attr_accessible :game, :game_id, :team_a_goals, :team_b_goals, :user
 
   # relations
   belongs_to :game
@@ -16,6 +16,7 @@ class Bet < ActiveRecord::Base
   # hooks
   before_create :thank_you_points
   after_save :update_user_score
+  after_create :broadcast
 
 
 
@@ -79,7 +80,11 @@ class Bet < ActiveRecord::Base
   end
 
   def update_user_score
-    user.update_score! if score && score > 0
+    user.update_score! if score && score_changed? && score > 0
+  end
+
+  def broadcast
+    User.score_change!
   end
 
 end

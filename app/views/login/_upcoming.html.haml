@@ -1,0 +1,2 @@
+= cache "upcoming_games/#{Game.pending.sum(:start_at)}" do
+  = render @games

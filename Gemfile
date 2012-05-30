@@ -16,6 +16,7 @@ gem 'dalli'
 gem 'savon'
 gem 'nginx_stream_pusher'
 gem 'redcarpet'#, :git => 'git://github.com/tanoku/redcarpet.git'
+gem 'daemons-rails', :git => 'git://github.com/mirasrael/daemons-rails.git'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

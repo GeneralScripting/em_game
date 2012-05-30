@@ -1,4 +1,5 @@
 class LoginController < ApplicationController
+  before_filter :load_ranking
   
   def index 
     Invitation.save_invitations(current_user, params[:request_ids]) if params[:request_ids]
@@ -16,4 +17,16 @@ class LoginController < ApplicationController
     end
   end
   
+
+  def ranking
+    render :partial => 'ranking'
+  end
+
+
+ protected
+
+  def load_ranking
+    @users = User.order('score DESC').limit(25)
+  end
+
 end

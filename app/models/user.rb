@@ -25,6 +25,16 @@ class User < ActiveRecord::Base
     )
   end
 
+  def self.score_change!
+    begin
+      channel = 'em_score_updates'
+      NginxStreamPusher::publish!(channel, { :update => true }.to_json)
+    rescue Timeout::Error, Errno::EINVAL, Errno::ECONNRESET, EOFError, Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError, Net::ProtocolError => e
+      # report but ignore
+      Airbrake.notify(e)
+    end
+  end
+
 
 
   def short_locale

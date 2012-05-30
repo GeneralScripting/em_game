@@ -12,6 +12,7 @@ class BetsController < ApplicationController
     @bet.save
     @game = @bet.game
     current_user.reload
+    expire_fragment('ranking')  if @bet.id
   end
 
   def edit

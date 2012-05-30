@@ -4,15 +4,15 @@
 
   #games.grid_4
     %h2= t('.matches')
-    %ol.games= render @games
+    %ol.games= render 'upcoming'
+
   #center.grid_5
     - if @current_games.present?
       = render 'current_games'
     - else
       = render 'next_game'
     = render 'past_games'
-    
-    
-  #ranking.grid_3
+
+  #ranking.grid_3{ :'data-url' => ranking_path }
     %h2= t('.ranking')
-    %ol= render @users
+    %ol= render 'ranking'

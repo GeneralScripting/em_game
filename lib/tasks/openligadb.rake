@@ -35,8 +35,8 @@ namespace :openliga do
       end
       unless live_updates.empty?
         begin
-          test_case_channel = 'em_game_updates'
-          NginxStreamPusher::publish!(test_case_channel, { :updates => live_updates }.to_json)
+          channel = 'em_game_updates'
+          NginxStreamPusher::publish!(channel, { :updates => live_updates }.to_json)
         rescue Timeout::Error, Errno::EINVAL, Errno::ECONNRESET, EOFError, Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError, Net::ProtocolError => e
           # report but ignore
           Airbrake.notify(e)
