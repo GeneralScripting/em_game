@@ -8,13 +8,12 @@ de:
       your_score: "Deine Punkte"
       your_rank: "Dein Rang"
       invite: "Freunde einladen"
+      how: "So funktioniert's"
+      faq: FAQ
   login:
     index:
       matches: Spiele
       ranking: Rangliste
-      faq: FAQ
-      authors: "Wer steckt dahinter?"
-      how: "So funktioniert's"
     next_game:
       title: "Das nächste Spiel"
     current_games:

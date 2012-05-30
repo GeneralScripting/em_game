@@ -13,14 +13,13 @@ en:
       your_score: "Your Score"
       your_rank: "Your Rank"
       invite: "Invite your friends"
+      how: "How it works"
+      faq: "FAQ"
 
   login:
     index:
       matches: "Matches"
       ranking: "Ranking"
-      faq: "FAQ"
-      authors: "Who is behind this?"
-      how: "How it works"
     next_game:
       title: "The next match"
     current_games:
