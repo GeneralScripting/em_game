@@ -98,6 +98,12 @@ GEM
     email_spec (1.2.1)
       mail (~> 2.2)
       rspec (~> 2.0)
+    encrypted-cookie-store (1.0)
+      encrypted-cookies (~> 1.0)
+      rails (~> 3.0)
+    encrypted-cookies (1.0)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
     erubis (2.7.0)
     eventmachine (0.12.10)
     execjs (1.4.0)
@@ -289,6 +295,7 @@ DEPENDENCIES
   dalli
   database_cleaner (>= 0.7.2)
   email_spec (>= 1.2.1)
+  encrypted-cookie-store
   execjs
   facebooker2
   factory_girl_rails (>= 3.3.0)

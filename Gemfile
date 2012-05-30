@@ -10,6 +10,7 @@ gem 'mysql2'
 
 gem 'execjs'
 gem 'therubyracer'
+gem 'encrypted-cookie-store'
 
 gem 'web_translate_it', :group => :development
 gem 'dalli'
