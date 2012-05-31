@@ -60,6 +60,7 @@ en:
         ... + <b>2 points</b> if you guessed only on goal count right
     form:
       goals: "Goals"
+      post_on_facebook: "Post on Facebook"
 
   rounds:
     a: Group A
