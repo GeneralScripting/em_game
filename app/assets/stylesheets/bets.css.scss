@@ -39,10 +39,25 @@ form {
       font-size:16px;
     }
   }
+  .input.boolean {
+    margin:10px auto 1px;
+    width:auto;
+    label {
+      width:60%;
+      margin-left:130px;
+      text-align:left;
+      input {
+        width:auto;
+        position:relative;
+        top:-3px;
+      }
+    }
+  }
   .buttons {
+    clear:left;
     text-align:center;
     input {
-      margin:20px 0 5px;
+      margin:11px 0 5px;
     }
   }
 }
