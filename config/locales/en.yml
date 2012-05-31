@@ -3,6 +3,9 @@ en:
   colorbox:
     close: "close"
 
+  post_new_bet: "I bet on %{team_a} %{team_a_goals} : %{team_b_goals} %{team_b}  via testCloud 'EM Game'"
+  post_changed_bet: "I have changed my bet to  %{team_a} %{team_a_goals} : %{team_b_goals} %{team_b} via testCloud 'EM Game'"
+
   layouts:
     navigation:
       logo: "EM Betting Game"

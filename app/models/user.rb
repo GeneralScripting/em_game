@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :facebook_idx, :first_name, :last_name, :score, :image_url, :large_image_url, :small_image_url, :square_image_url, :username, :locale
 
+  attr_accessor :facebook_user
+
   # relations
   has_many :bets
 

@@ -26,6 +26,7 @@ class ApplicationController < ActionController::Base
 
   def find_or_create_user_from_facebook
     user = User.find_or_create_from_facebook( current_facebook_user )
+    user.facebook_user = current_facebook_user
     session[:user_id] = user.id
     user
   end

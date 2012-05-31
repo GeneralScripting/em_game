@@ -1,5 +1,7 @@
 class Bet < ActiveRecord::Base
-  attr_accessible :game, :game_id, :team_a_goals, :team_b_goals, :user
+  attr_accessible :game, :game_id, :team_a_goals, :team_b_goals, :user, :post_on_facebook
+
+  attr_accessor :post_on_facebook
 
   # relations
   belongs_to :game
@@ -17,6 +19,7 @@ class Bet < ActiveRecord::Base
   before_create :thank_you_points
   after_save :update_user_score
   after_create :broadcast
+  
 
 
 
