@@ -14,7 +14,7 @@ while($running) do
   
   # Replace this with your code
   Rails.logger.auto_flushing = true
-  Rails.logger.info "OpenligaDB Watch running at #{Time.now}:\n"
+  Rails.logger.info "OpenligaDB Watch running at #{Time.now}:"
   
   if Game.without_oldb_idx.exists? || Game.running.exists?
     Rails.logger.info "-> executing!\n"
