@@ -13,7 +13,7 @@ class OpenLigaDB
       soap.body = {}
       params.each do |key, value|
         unless key == :action
-          key = key.lower_camelcase.gsub(/Id$/, 'ID').gsub(/Id_1$/, 'ID1').gsub(/Id_2$/, 'ID2')
+          key = key.to_s.gsub(/Id$/, 'ID').gsub(/Id_1$/, 'ID1').gsub(/Id_2$/, 'ID2')
           soap.body[key] = value
         end
       end

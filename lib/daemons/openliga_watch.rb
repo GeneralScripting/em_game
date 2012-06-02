@@ -21,9 +21,9 @@ while($running) do
     require 'openligadb'
     liga = OpenLigaDB.new
     response = liga.request('matchdata_by_group_league_saison',
-                              'group_order_id' => 1,
-                              'league_saison' => 2012,
-                              'league_shortcut' => 'em12')
+                              groupOrderId: 1,
+                              leagueSaison: 2012,
+                              leagueShortcut: 'em12')
     I18n.locale = :de
     Game.without_oldb_idx.each do |game|
       oldb_round = game.group ? 'Vorrunde' : 'TODO'
@@ -33,13 +33,13 @@ while($running) do
       if oldb_match
         game.update_attribute(:oldb_idx, oldb_match[:match_id])
       else
-        puts "could not find match #{game.id} (#{oldb_round}: #{oldb_team1} vs. #{oldb_team2})"
+        raise "could not find match #{game.id} (#{oldb_round}: #{oldb_team1} vs. #{oldb_team2})"
       end
     end
     live_updates = []
     Game.running.each do |game|
-      raise "game #{game.id} has not oldb_idx!" unless game.oldb_idx
-      oldb_match = response[:matchdata].select {|m| m[:match_id].eql?(game.oldb_idx) }.first
+      raise "game #{game.id} has no oldb_idx!" unless game.oldb_idx
+      oldb_match = response[:matchdata].select {|m| m[:match_id].eql?(game.oldb_idx.to_s) }.first
       game.update_from_oldb( oldb_match )
       game.end_at = Time.current            if oldb_match[:match_is_finished]
       if game.team_a_goals_changed? || game.team_b_goals_changed? || game.end_at_changed?
