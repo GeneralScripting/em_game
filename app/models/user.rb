@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
 
 
   def short_locale
-    locale.to_s[0..1]
+    locale ? locale.to_s[0..1] : :en
   end
 
   def full_name
