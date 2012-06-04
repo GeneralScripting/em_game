@@ -33,7 +33,7 @@ en:
       change_bet: "change your bet (%{result})"
       goals_title: "Goals"
       your_bet: "Your bet"
-      no_bet: "---"
+      no_bet: "--"
       your_points: "Your points"
 
   bets:

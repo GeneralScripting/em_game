@@ -26,7 +26,7 @@ de:
       change_bet: "Tipp (%{result}) ändern"
       goals_title: Tore
       your_bet: "Dein Tipp"
-      no_bet: ~
+      no_bet: "--"
       your_points: "Deine Punkte"
   bets:
     edit:
