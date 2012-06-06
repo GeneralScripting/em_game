@@ -16,7 +16,6 @@ fr:
   login:
     index:
       matches: ~
-      percent_bet: ~
       ranking: ~
     next_game:
       title: ~
@@ -33,6 +32,8 @@ fr:
       no_bet: ~
       your_points: ~
   bets:
+    status:
+      percent_bet: ~
     edit:
       title: ~
     new:

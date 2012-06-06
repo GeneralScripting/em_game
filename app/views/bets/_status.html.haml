@@ -1,0 +1,3 @@
+%p= t('.percent_bet', :count => current_user.percent_bet)
+.progress
+  .bar{ :style => "width:#{current_user.percent_bet}%;" }
