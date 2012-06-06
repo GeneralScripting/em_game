@@ -38,6 +38,11 @@ class User < ActiveRecord::Base
   end
 
 
+  def percent_bet
+    @percent_bet ||= ((bets.for_game(Game.pending.pluck(:id)).count / Game.pending.count.to_f) * 100).round
+  end
+
+
 
   def short_locale
     locale ? locale.to_s[0..1] : :en

@@ -1,6 +1,8 @@
 fr:
   colorbox:
     close: ~
+  post_new_bet: ~
+  post_changed_bet: ~
   layouts:
     navigation:
       logo: ~
@@ -10,9 +12,11 @@ fr:
       invite: ~
       how: ~
       faq: ~
+      help_translate: ~
   login:
     index:
       matches: ~
+      percent_bet: ~
       ranking: ~
     next_game:
       title: ~
@@ -36,6 +40,7 @@ fr:
       info: ~
     form:
       goals: ~
+      post_on_facebook: ~
   rounds:
     a: ~
     b: ~

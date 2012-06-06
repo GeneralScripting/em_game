@@ -15,10 +15,12 @@ en:
       invite: "Invite your friends"
       how: "How it works"
       faq: "FAQ"
+      help_translate: "Help translate"
 
   login:
     index:
       matches: "Matches"
+      percent_bet: "Bet placed for %{count}%"
       ranking: "Ranking"
     next_game:
       title: "The next match"

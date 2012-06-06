@@ -1,6 +1,28 @@
 
 @import "compass";
 
+#games {
+  .status {
+    position:absolute;
+    top:0;
+    right:0;
+    width:30%;
+    text-align:center;
+    p {
+      font-size:10px;
+      font-weight:normal;
+      margin:0 0 2px;
+    }
+    .progress {
+      height:10px;
+      .bar {
+        @include border-radius(4px);
+        height:10px;
+      }
+    }
+  }
+}
+
 ol.games {
   margin:12px 0;
   list-style-type:none;

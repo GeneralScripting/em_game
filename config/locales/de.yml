@@ -1,6 +1,8 @@
 de:
   colorbox:
     close: schließen
+  post_new_bet: "Mein Tipp für die EM %{team_a} %{team_a_goals} : %{team_b_goals} %{team_b}"
+  post_changed_bet: "Ich habe meinen Tipp für die EM geändert: %{team_a} %{team_a_goals} : %{team_b_goals} %{team_b}"
   layouts:
     navigation:
       logo: "EM Tippspiel"
@@ -10,10 +12,12 @@ de:
       invite: "Freunde einladen"
       how: "So funktioniert's"
       faq: FAQ
+      help_translate: "Hilf beim Übersetzen"
   login:
     index:
       matches: Spiele
-      ranking: Rangliste
+      percent_bet: "%{count}% getippt"
+      ranking: "Top 25"
     next_game:
       title: "Das nächste Spiel"
     current_games:
@@ -106,5 +110,3 @@ de:
       short: "%d %b %H:%M"
       international: "%Y-%m-%d"
     pm: nachm.
-  post_new_bet: "Mein Tipp für die EM %{team_a} %{team_a_goals} : %{team_b_goals} %{team_b}"
-  post_changed_bet: "Ich habe meinen Tipp für die EM geändert: %{team_a} %{team_a_goals} : %{team_b_goals} %{team_b}"

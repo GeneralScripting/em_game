@@ -1,18 +1,22 @@
 es:
   colorbox:
-    close: ~
+    close: cerrar
+  post_new_bet: ~
+  post_changed_bet: ~
   layouts:
     navigation:
-      logo: ~
+      logo: "EM Game"
       powered_by: ~
       your_score: ~
       your_rank: ~
       invite: ~
       how: ~
       faq: ~
+      help_translate: ~
   login:
     index:
       matches: ~
+      percent_bet: ~
       ranking: ~
     next_game:
       title: ~
@@ -36,6 +40,7 @@ es:
       info: ~
     form:
       goals: ~
+      post_on_facebook: ~
   rounds:
     a: ~
     b: ~

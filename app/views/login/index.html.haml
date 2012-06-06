@@ -3,7 +3,12 @@
 .container_12
 
   #games.grid_4
-    %h2= t('.matches')
+    %h2
+      = t('.matches')
+      .status
+        %p= t('.percent_bet', :count => current_user.percent_bet)
+        .progress
+          .bar{ :style => "width:#{current_user.percent_bet}%;" }
     %ol.games= render 'upcoming'
 
   #center.grid_5

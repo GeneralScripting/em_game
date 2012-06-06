@@ -13,7 +13,8 @@ class Bet < ActiveRecord::Base
   validate :game_not_started_yet
 
   # scope
-  scope :scored,  where( 'bets.score IS NOT NULL AND bets.score != 0' )
+  scope :scored,    where( 'bets.score IS NOT NULL AND bets.score != 0' )
+  scope :for_game,  lambda {|g| where(:game_id => g) }
 
   # hooks
   before_create :thank_you_points
