@@ -4,6 +4,7 @@ describe User do
 
   context "relations" do
     it { should have_many(:bets) }
+    it { should have_many(:chat_messages) }
   end
 
   context "validations" do

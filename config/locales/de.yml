@@ -1,4 +1,8 @@
 de:
+  activerecord:
+    attributes:
+      chat_message:
+        body: "Deine Nachricht"
   colorbox:
     close: schließen
   post_new_bet: "Mein Tipp für die EM %{team_a} %{team_a_goals} : %{team_b_goals} %{team_b}"
@@ -23,6 +27,8 @@ de:
       title: "Aktuelle Spiele"
     past_games:
       title: "Vergangene Spiele"
+    chat:
+      title: Chat
   games:
     game:
       bet: tippen

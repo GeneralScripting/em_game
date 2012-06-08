@@ -1,0 +1,5 @@
+%h2= t('.title', :count => @current_games.size)
+
+#chat{ :'data-messages' => @chat_messages.reverse.to_json(ChatMessage.json_options) }
+  .messages
+  .input= render 'chat_messages/form'

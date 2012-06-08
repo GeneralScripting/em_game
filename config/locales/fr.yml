@@ -1,4 +1,8 @@
 fr:
+  activerecord:
+    attributes:
+      chat_message:
+        body: ~
   colorbox:
     close: ~
   post_new_bet: ~
@@ -22,6 +26,8 @@ fr:
     current_games:
       title: ~
     past_games:
+      title: ~
+    chat:
       title: ~
   games:
     game:

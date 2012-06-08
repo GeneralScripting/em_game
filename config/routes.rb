@@ -7,6 +7,7 @@ EmGame::Application.routes.draw do
   post :log_invitation, :to => 'login#log_invitation'
 
   resources :bets
+  resources :chat_messages, :only => [:create]
 
   get :ranking, :to => 'login#ranking'
 

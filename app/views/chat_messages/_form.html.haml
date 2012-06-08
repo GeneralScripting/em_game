@@ -1,0 +1,5 @@
+= simple_form_for @chat_message, :remote => true do |f|
+  = f.input :body, :required => false
+  .icons
+    - ChatMessage::ICONS.each do |icon|
+      = link_to image_tag("chat/#{icon}.png"), ":#{icon}:"

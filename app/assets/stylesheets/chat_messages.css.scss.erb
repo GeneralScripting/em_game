@@ -1,0 +1,65 @@
+// Place all the styles related to the chat_messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "compass";
+
+#chat {
+  .messages {
+    //@include min-height(100px);
+    height:250px;
+    overflow:auto;
+    @include box-sizing(border-box);
+    width:100%;
+    border:1px solid #CCC;
+    .message {
+      font-size:11px;
+      @include box-sizing(border-box);
+      padding:0 4px;
+      .aaaauthor {
+        @include inline-block;
+        margin-right:4px;
+        font-weight:bold;
+      }
+      .author {
+        display:block;
+        float:left;
+        margin-right:4px;
+        font-weight:bold;
+      }
+      .text {
+        @include inline-block;
+        span {
+          @include inline-block;
+          width:16px;
+          height:16px;
+          margin:0 2px;
+          <% ChatMessage::ICONS.each do |icon| %>
+          &.<%= icon %> {
+            background:transparent url(asset_path('chat/<%= icon %>.png', image)) no-repeat 0 0;
+          }
+          <% end %>
+        }
+      }
+    }
+  }
+  .input {
+    form {
+      padding:0 0 12px !important;
+    }
+    label {
+      font-size:10px;
+      margin:4px 0 0;
+    }
+    textarea {
+      width:100%;
+      height:32px;
+      font-size:11px;
+      line-height:12px;
+      @include box-sizing(border-box);
+    }
+    .icons {
+      text-align:center;
+    }
+  }
+}

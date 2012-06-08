@@ -1,4 +1,8 @@
 en:
+  activerecord:
+    attributes:
+      chat_message:
+        body: Your message
   colorbox:
     close: close
   post_new_bet: "I bet on %{team_a} %{team_a_goals} : %{team_b_goals} %{team_b}  via testCloud 'EM Game'"
@@ -23,6 +27,8 @@ en:
       title: "Current matche(s)"
     past_games:
       title: "Past matches"
+    chat:
+      title: Chat
   games:
     game:
       bet: bet

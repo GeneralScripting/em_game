@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 
   # relations
   has_many :bets
+  has_many :chat_messages
 
   # validations
   validates :email, :first_name, :last_name, :facebook_idx, :locale, :presence => true

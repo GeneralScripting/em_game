@@ -29,6 +29,8 @@ class ApplicationController < ActionController::Base
     user.facebook_user = current_facebook_user
     session[:user_id] = user.id
     user
+  rescue NoMethodError => e
+    redirect_to please_login_url and return
   end
 
   def set_locale
