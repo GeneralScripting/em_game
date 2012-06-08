@@ -11,8 +11,8 @@
   #center.grid_5
     #current_games_container{ :'data-url' => current_games_url, :class => !@current_games.present? && 'hidden' }= render 'current_games'
     #next_game{ :'data-url' => next_game_url, :class => @current_games.present? && 'hidden' }= render 'next_game'
-    #past_games{ :'data-url' => past_games_url, :class => @past_games.empty? && 'hidden' }= render 'past_games'  
     = render 'chat'
+    #past_games{ :'data-url' => past_games_url, :class => @past_games.empty? && 'hidden' }= render 'past_games'
 
   #ranking.grid_3{ :'data-url' => ranking_path }
     %h2= t('.ranking')
