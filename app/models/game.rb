@@ -1,5 +1,6 @@
 class Game < ActiveRecord::Base
   attr_accessible :comment, :end_at, :finals, :group, :start_at, :team_a_goals, :team_a_halftime_goals, :team_a, :team_a_penalty_goals, :team_b_goals, :team_b_halftime_goals, :team_b, :team_b_penalty_goals
+  attr_accessor :updated_from_oldb_match
 
   # relations
   belongs_to :team_a, class_name: "Team"
@@ -69,8 +70,10 @@ class Game < ActiveRecord::Base
 
 
   def update_from_oldb( oldb_match )
+    self.updated_from_oldb_match = true
     self.team_a_goals = oldb_match[:points_team1].to_i  unless oldb_match[:points_team1].to_i == -1
     self.team_b_goals = oldb_match[:points_team2].to_i  unless oldb_match[:points_team2].to_i == -1
+    
   end
 
 

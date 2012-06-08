@@ -4,6 +4,7 @@
   $("#game_<%= @bet.game_id %>").replaceWith("<%= j render(@bet.game) %>");
   $("#top_stats .your_score .number").text("<%= current_user.score || 0 %>");
   $("#top_stats .your_rank .number").text("<%= current_user.score_ranking || 0 %>");
+  $("#ranking").data("dirty", "yes");
 <% else %>
   $("#new_bet").replaceWith("<%= j render('form') %>");
   $('#cboxLoadingOverlay').hide();

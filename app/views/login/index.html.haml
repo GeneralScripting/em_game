@@ -2,18 +2,16 @@
 
 .container_12
 
-  #games.grid_4
+  #games.grid_4{ :'data-url' => pending_games_url }
     %h2
       = t('.matches')
       .status= render 'bets/status'
     %ol.games= render 'upcoming'
 
   #center.grid_5
-    - if @current_games.present?
-      = render 'current_games'
-    - else
-      = render 'next_game'
-    = render 'past_games'  
+    #current_games_container{ :'data-url' => current_games_url, :class => !@current_games.present? && 'hidden' }= render 'current_games'
+    #next_game{ :'data-url' => next_game_url, :class => @current_games.present? && 'hidden' }= render 'next_game'
+    #past_games{ :'data-url' => past_games_url, :class => @past_games.empty? && 'hidden' }= render 'past_games'  
     = render 'chat'
 
   #ranking.grid_3{ :'data-url' => ranking_path }

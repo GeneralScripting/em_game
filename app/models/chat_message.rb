@@ -8,7 +8,7 @@ class ChatMessage < ActiveRecord::Base
   belongs_to :user
 
   # validations
-  validates :user, :body, :presence => true
+  validates :body, :presence => true
 
   # hooks
   after_create :broadcast
@@ -16,11 +16,11 @@ class ChatMessage < ActiveRecord::Base
 
 
   def author_name
-    user.first_name
+    user ? user.first_name : 'Ticker'
   end
 
   def author_locale
-    user.short_locale
+    user ? user.short_locale : 'sys'
   end
 
   def html_body
@@ -38,7 +38,6 @@ class ChatMessage < ActiveRecord::Base
   def broadcast
     begin
       channel = 'em_chat'
-      #NginxStreamPusher::publish!(channel, { :author => author_name, :locale => author_locale, :text => html_body }.to_json)
       NginxStreamPusher::publish!(channel, self.to_json(ChatMessage.json_options))
     rescue Errno::ECONNREFUSED, Timeout::Error, Errno::EINVAL, Errno::ECONNRESET, EOFError, Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError, Net::ProtocolError => e
       # report but ignore

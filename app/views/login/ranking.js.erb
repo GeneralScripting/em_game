@@ -1,0 +1,3 @@
+$("#ranking ol").html("<%= j render('ranking') %>");
+$("#top_stats .your_score .number").text("<%= current_user.score || 0 %>");
+$("#top_stats .your_rank .number").text("<%= current_user.score_ranking || 0 %>");

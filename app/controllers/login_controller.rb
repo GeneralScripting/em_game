@@ -13,7 +13,7 @@ class LoginController < ApplicationController
     @past_games     = Game.ended.order('start_at DESC')
     @bets           = current_user.fetch_bets
     @chat_message   = ChatMessage.new
-    @chat_messages  = ChatMessage.order('id DESC').limit(5)
+    @chat_messages  = ChatMessage.order('id DESC').limit(10)
   end
 
   def please_login
@@ -28,8 +28,27 @@ class LoginController < ApplicationController
   end
   
 
+  def pending_games
+    @games = Game.pending.order('start_at')
+    render :partial => 'upcoming'
+  end
+
+  def current_games
+    @current_games = Game.running.order('start_at')
+    render :partial => 'current_games'
+  end
+
+  def past_games
+    @past_games = Game.ended.order('start_at DESC')
+    render :partial => 'past_games'
+  end
+
+  def next_game
+    @next_game = Game.pending.order('start_at').first
+    render :partial => 'next_game'
+  end
+
   def ranking
-    render :partial => 'ranking'
   end
 
 

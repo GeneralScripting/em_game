@@ -40,3 +40,19 @@ jQuery ->
     $timer = $(this)
     $timer.append $("<div />").addClass("time")
     $test_case_timer $timer
+
+  $(".countdown").live "time_is_up", ->
+    $delay 1000, ->
+      $.ajax
+        url: $("#games").data('url'),
+        type: "get",
+        dataType: "html",
+        success: (data)->
+          $("#games ol.games").html(data)
+      $.ajax
+        url: $("#current_games_container").data('url'),
+        type: "get",
+        dataType: "html",
+        success: (data)->
+          $("#next_game").hide();
+          $("#current_games_container").show().html(data)

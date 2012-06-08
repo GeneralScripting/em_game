@@ -1,6 +1,30 @@
 
 jQuery ->
 
+  $game_has_ended = ->
+    if $("#current_games_container .game").length > 1
+      $.ajax
+        url: $("#current_games_container").data('url'),
+        type: "get",
+        dataType: "html",
+        success: (data)->
+          $("#current_games_container").html(data)
+    else
+      $.ajax
+        url: $("#next_game").data('url'),
+        type: "get",
+        dataType: "html",
+        success: (data)->
+          $("#current_games_container").hide()
+          $("#next_game").show().html(data)
+    $.ajax
+      url: $("#past_games").data('url'),
+      type: "get",
+      dataType: "html",
+      success: (data)->
+        $("#past_games").show().html(data)
+    $("#ranking").data "dirty", "yes"
+
   $chat_message_json2html = (json)->
     $author = $("<span />").addClass("author").addClass(json.author_locale).text "#{json.author_name}:"
     $text   = $("<span />").addClass("text").html json.html_body
@@ -24,7 +48,7 @@ jQuery ->
       when "em_game_updates"
         $data = JSON.parse text
         if $data.ended
-          # body...
+          $game_has_ended()
         else
           $.each $data['updates'], ->
             $game = $(this)

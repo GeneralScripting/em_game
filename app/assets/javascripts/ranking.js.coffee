@@ -9,9 +9,7 @@ jQuery ->
     $.ajax
       url: $ranking.data('url'),
       type: 'GET',
-      dataType: 'html',
-      success: (data)->
-        $ranking.find("ol").html data
+      dataType: 'script'
 
   $timer = $interval 500, ->
     if $ranking.data('dirty') == "yes"
