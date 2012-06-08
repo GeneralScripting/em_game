@@ -80,7 +80,9 @@ class Bet < ActiveRecord::Base
   end
 
   def game_not_started_yet
-    errors.add(:base, :invalid) unless game && game.pending?
+    if team_a_goals_changed? || team_b_goals_changed?
+      errors.add(:base, :invalid) unless game && game.pending?
+    end
   end
 
   def update_user_score
