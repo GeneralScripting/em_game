@@ -47,13 +47,15 @@ jQuery ->
     switch channel
       when "em_game_updates"
         $data = JSON.parse text
-        if $data.ended
-          $game_has_ended()
-        else
-          $.each $data['updates'], ->
-            $game = $(this)
+        $.each $data.updates, ->
+          $game = this
+          $games_ended = 0
+          if $game.ended
+            $games_ended += 1
+          else
             $("#game_#{$game.game_id} .goals .goals_a .value").text $game.team_a
             $("#game_#{$game.game_id} .goals .goals_b .value").text $game.team_b
+          $game_has_ended() if $games_ended > 0
       when "em_score_updates"
         $("#ranking").data "dirty", "yes"
       when "em_chat"
