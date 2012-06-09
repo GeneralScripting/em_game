@@ -12,12 +12,12 @@ class BetsController < ApplicationController
   def create
     @bet = current_user.bets.new( params[:bet] )
     @game = @bet.game
-    if @bet.save && @bet.post_on_facebook == '1'
+    if @bet.save && @bet.post_on_facebook == '1' && current_facebook_user.has_permission?(:publish_stream)
       current_facebook_user.feed_create(
         Mogli::Post.new(:message => t('post_new_bet', :user => current_facebook_user.name, :team_a => t(@game.team_a.country, :scope => 'countries'), :team_b => t(@game.team_b.country, :scope => 'countries'), :team_a_goals => @bet.team_a_goals, :team_b_goals => @bet.team_b_goals))
       )
     end
-    Airbrake.notify(:error_class => "InvalidBet", :error_message => "InvalidBet: #{@bet.errors.full_messages.to_sentence}", :parameters => { :errors => @bet.errors.full_messages.to_sentence }) unless @bet.id
+    Airbrake.notify(:error_class => "InvalidBet", :error_message => "InvalidBet: #{@bet.errors.full_messages.to_sentence}", :parameters => @bet.attributes.merge({ :errors => @bet.errors.full_messages.to_sentence })) unless @bet.id
     current_user.reload
   end
 

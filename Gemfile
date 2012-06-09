@@ -78,4 +78,5 @@ gem "guard-rails", ">= 0.0.3", :group => :development
 gem "guard-livereload", ">= 0.3.0", :group => :development
 gem "guard-rspec", ">= 0.4.3", :group => :development
 gem "guard-cucumber", ">= 0.6.1", :group => :development
+gem 'mogli', :git => 'git://github.com/mmangino/mogli.git'
 gem "facebooker2"

@@ -15,6 +15,16 @@ GIT
       multi_json (~> 1.0)
       rails (~> 3.0)
 
+GIT
+  remote: git://github.com/mmangino/mogli.git
+  revision: 9925b31ced38c6653b61c807df264dadfa46b16f
+  specs:
+    mogli (0.0.37)
+      hashie (>= 1.1.0)
+      httmultiparty (>= 0.3.6)
+      httparty (>= 0.4.3)
+      multi_json (>= 1.0.3, < 1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -146,9 +156,12 @@ GEM
       activesupport (~> 3.0)
       haml (~> 3.0)
       railties (~> 3.0)
-    hashie (1.0.0)
+    hashie (1.2.0)
     hike (1.2.1)
     hpricot (0.8.6)
+    httmultiparty (0.3.8)
+      httparty (>= 0.7.3)
+      multipart-post
     httparty (0.8.3)
       multi_json (~> 1.0)
       multi_xml
@@ -170,9 +183,6 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.18)
-    mogli (0.0.29)
-      hashie (~> 1.0.0)
-      httparty (>= 0.4.3)
     multi_json (1.3.5)
     multi_xml (0.5.1)
     multipart-post (1.1.5)
@@ -312,6 +322,7 @@ DEPENDENCIES
   jquery-rails
   launchy (>= 2.1.0)
   localized_country_select!
+  mogli!
   mysql2
   nginx_stream_pusher
   rails (= 3.2.3)

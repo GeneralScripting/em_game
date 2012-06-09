@@ -2,5 +2,6 @@
   = f.input :game_id, :as => :hidden
   = f.input :team_a_goals, :as => :string, :label => "#{image_tag("flags/32/#{@game.team_a.country.downcase}.png")}<span class='name'>#{t(@game.team_a.country, :scope => 'countries')}</span><span class='goals'>#{t('.goals')}</span>"
   = f.input :team_b_goals, :as => :string, :label => "#{image_tag("flags/32/#{@game.team_b.country.downcase}.png")}<span class='name'>#{t(@game.team_b.country, :scope => 'countries')}</span><span class='goals'>#{t('.goals')}</span>"
-  = f.input :post_on_facebook, :as => :boolean, :label => t('.post_on_facebook')
+  - if current_facebook_user.has_permission?(:publish_stream)
+    = f.input :post_on_facebook, :as => :boolean, :label => t('.post_on_facebook')
   .buttons= f.button :submit
