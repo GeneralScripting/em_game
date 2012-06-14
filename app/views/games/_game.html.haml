@@ -46,7 +46,7 @@
       .your_points
         .bet_title= t('.your_points')
         - if bet = @bets.select {|b| b.game_id == game.id }.first
-          %span.points= bet.score || 0
+          %span.points{ :title => "#{t('.your_bet')}: #{bet.team_a_goals}:#{bet.team_b_goals}" }= bet.score || 0
         - else
           %p.no_bet= t('.no_bet')
     .live_round= t(game.round, :scope => 'rounds')

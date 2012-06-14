@@ -57,11 +57,9 @@ h2 {
 }
 
 header.navbar {
-  //@include background(linear-gradient(top, #133783, #FFFFFF));
   background:$background_color;
   @include min-height(70px);
   nav {
-    //background:transparent;
     @include background(linear-gradient(top, #133783, #EEEEEE 10%, $background_color));
     @include box-shadow(none);
     @include min-height(70px);
