@@ -26,10 +26,10 @@ while($running) do
                               leagueShortcut: 'em12')
     I18n.locale = :de
     Game.without_oldb_idx.each do |game|
-      oldb_round = game.group ? 'Vorrunde' : 'TODO'
+      #oldb_round = game.group ? 'Vorrunde' : 'TODO'
       oldb_team1 = I18n.t(game.team_a.country, :scope => 'countries')
       oldb_team2 = I18n.t(game.team_b.country, :scope => 'countries')
-      oldb_match = response[:matchdata].select {|m| m[:group_name].eql?(oldb_round) && m[:name_team1].eql?(oldb_team1) && m[:name_team2].eql?(oldb_team2) }.first
+      oldb_match = response[:matchdata].select {|m| m[:name_team1].eql?(oldb_team1) && m[:name_team2].eql?(oldb_team2) }.first
       if oldb_match
         game.update_attribute(:oldb_idx, oldb_match[:match_id])
       else
