@@ -1,5 +1,6 @@
-%h2#next_game_title= t('.title')
+- if @next_game
+  %h2#next_game_title= t('.title')
 
-#next_game_countdown
-  = image_tag 'current_game.png'
-  .countdown{ :'data-timeleft' => (@next_game.start_at - Time.now).to_i }
+  #next_game_countdown
+    = image_tag 'current_game.png'
+    .countdown{ :'data-timeleft' => (@next_game.start_at - Time.now).to_i }
