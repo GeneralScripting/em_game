@@ -2,7 +2,7 @@ en:
   activerecord:
     attributes:
       chat_message:
-        body: Your message
+        body: "Your message"
   colorbox:
     close: close
   post_new_bet: "I bet on %{team_a} %{team_a_goals} : %{team_b_goals} %{team_b}  via testCloud 'EM Game'"
@@ -69,7 +69,7 @@ en:
     b: "Group B"
     c: "Group C"
     d: "Group D"
-    last_16: "last 16"
+    last_16: Quarterfinal
     last_8: Quarterfinal
     last_4: Semifinal
     last_2: Final

@@ -12,7 +12,7 @@ class Game < ActiveRecord::Base
 
   # plugins
   as_enum :group,   { :a => 0, :b => 1, :c => 2, :d => 3 }
-  as_enum :finals,  { :last_16 => 0, :last_8 => 1, :last_4 => 2, :last_2 => 3 }
+  as_enum :finals,  { :last_16 => 0, :last_4 => 1, :last_2 => 2 }
 
   # scopes
   scope :pending,           lambda { where( 'games.start_at > ?', Time.current ).where( :end_at => nil ) }
