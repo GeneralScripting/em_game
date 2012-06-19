@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
 
 
   def percent_bet
-    @percent_bet ||= ((bets.for_game(Game.pending.pluck(:id)).count / Game.pending.count.to_f) * 100).round
+    @percent_bet ||= ((bets.for_game(Game.pending.pluck(:id)).count / (Game.pending.count.nonzero? || 1).to_f) * 100).round
   end
 
 
