@@ -21,21 +21,21 @@ while($running) do
     require 'openligadb'
     liga = OpenLigaDB.new
     response = liga.request('matchdata_by_group_league_saison',
-                              groupOrderId: 2,
+                              groupOrderId: 3,
                               leagueSaison: 2012,
                               leagueShortcut: 'em12')
     I18n.locale = :de
-    #Game.without_oldb_idx.each do |game|
-    #  #oldb_round = game.group ? 'Vorrunde' : 'TODO'
-    #  oldb_team1 = I18n.t(game.team_a.country, :scope => 'countries')
-    #  oldb_team2 = I18n.t(game.team_b.country, :scope => 'countries')
-    #  oldb_match = response[:matchdata].select {|m| m[:name_team1].eql?(oldb_team1) && m[:name_team2].eql?(oldb_team2) }.first
-    #  if oldb_match
-    #    game.update_attribute(:oldb_idx, oldb_match[:match_id])
-    #  else
-    #    raise "could not find match #{game.id} (#{oldb_team1} vs. #{oldb_team2})"
-    #  end
-    #end
+    Game.without_oldb_idx.each do |game|
+      #oldb_round = game.group ? 'Vorrunde' : 'TODO'
+      oldb_team1 = I18n.t(game.team_a.country, :scope => 'countries')
+      oldb_team2 = I18n.t(game.team_b.country, :scope => 'countries')
+      oldb_match = response[:matchdata].select {|m| m[:name_team1].eql?(oldb_team1) && m[:name_team2].eql?(oldb_team2) }.first
+      if oldb_match
+        game.update_attribute(:oldb_idx, oldb_match[:match_id])
+      else
+        raise "could not find match #{game.id} (#{oldb_team1} vs. #{oldb_team2})"
+      end
+    end
     live_updates = []
     Game.running.each do |game|
       raise "game #{game.id} has no oldb_idx!" unless game.oldb_idx
