@@ -21,7 +21,7 @@ while($running) do
     require 'openligadb'
     liga = OpenLigaDB.new
     response = liga.request('matchdata_by_group_league_saison',
-                              groupOrderId: 3,
+                              groupOrderId: 4,
                               leagueSaison: 2012,
                               leagueShortcut: 'em12')
     I18n.locale = :de
