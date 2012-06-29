@@ -11,6 +11,7 @@ class Bet < ActiveRecord::Base
   validates :game, :user, :team_a_goals, :team_b_goals, :presence => true
   validates :game_id, :uniqueness => { :scope => :user_id }
   validate :game_not_started_yet
+  validate :no_draw_in_finals
 
   # scope
   scope :scored,    where( 'bets.score IS NOT NULL AND bets.score != 0' )
@@ -83,6 +84,10 @@ class Bet < ActiveRecord::Base
     if team_a_goals_changed? || team_b_goals_changed?
       errors.add(:base, :invalid) unless game && game.pending?
     end
+  end
+
+  def no_draw_in_finals
+    errors.add(:base, :invalid)   if draw? && game && game.finals?
   end
 
   def update_user_score

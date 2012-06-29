@@ -30,6 +30,9 @@ class Game < ActiveRecord::Base
   end
 
 
+  def finals?
+    finals.present?
+  end
 
   def pending?
     status == :pending
